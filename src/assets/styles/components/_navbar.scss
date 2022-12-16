@@ -1,0 +1,98 @@
+.main__navbar {
+    background-color: $myYellow;
+    font-family: $myTitle;
+    font-size: 1.3rem;
+
+    /* Logo */
+    .navbar__logo {
+        width: 40vw;
+    }
+
+    /* Menú hamburguesa */
+    .navbar-toggler {
+        border: $myDarkBlue solid 1px;
+        color: $myDarkBlue;
+        font-size: 1.5rem;
+        padding: 5px;
+
+        span {
+            color: $myDarkBlue;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    /* Barra de navegación - Enlaces */
+    .navbar__links a{
+        &:hover {
+            color: $myPink;
+        }
+    }
+
+    /* Form */
+    .navbar__form {
+        input {
+            font-family: $myTitle;
+            font-size: 1.3rem;
+            border: $myDarkBlue 1px solid;
+
+            &:focus {
+                border: $myPink 1px solid;
+                box-shadow: none;
+            }
+        }
+
+        .navbar__button {
+            background-color: $myDarkBlue;
+            border: none;
+            font-family: $myTitle;
+            font-size: 1.3rem;
+
+            &:hover {
+                background-color: $myPink;
+            }
+        }
+    }
+}
+
+/*===== ESTILOS MOBILE (OTHERS) - SM =====*/
+@media only screen and (min-width: 576px) {
+    .main__navbar {
+    
+        /* Logo */
+        .navbar__logo {
+            width: 30vw;
+        }
+    }
+}
+
+/*===== ESTILOS TABLET - MD =====*/
+@media only screen and (min-width: 768px) {
+    .main__navbar {
+    
+        /* Logo */
+        .navbar__logo {
+            width: 20vw;
+        }
+    }
+
+}
+
+/*===== ESTILOS LG =====*/
+@media only screen and (min-width: 992px) {
+    .main__navbar {
+
+        /* Logo */
+        .navbar__logo {
+            width: 10vw;
+        }
+
+        /* Barra de navegación - Enlaces */
+        .navbar__links {
+            width: 100%;
+            justify-content: flex-end !important;
+        }
+    }
+}

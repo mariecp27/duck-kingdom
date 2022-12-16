@@ -1,0 +1,24 @@
+/* Paleta de colores y fuente seleccionadas */
+$myLightBlue: #8ECAE6;
+$myPink: #CA2E55;
+$myDarkBlue: #023047;
+$myYellow: #FFB703;
+$myOrange: #FB8500;
+$myTitle: 'Merriweather', serif;
+$myText: 'Lato', sans-serif;
+
+/* Normalización de estilos */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Permite controlar el tamaño de fuente en rem: 1rem = 10px y fondo de la página */
+html{
+    font-size: 62.5%;
+    width: 100vw;
+    min-height: 100vh;
+    font-family: $myText;
+    overflow-x: hidden;
+}
