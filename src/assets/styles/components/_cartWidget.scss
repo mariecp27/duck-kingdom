@@ -1,0 +1,24 @@
+.navbar__car {
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.3rem;
+    border-radius: 0.375rem;;
+    border: #ffffff 1px solid;
+    padding: 5px;
+    background-color: $myDarkBlue;
+    opacity: 0.9;
+    margin: 0 5px;
+    @include myTransition;
+
+    &:hover {
+        cursor: pointer;
+        background-color: $myPink;
+    }
+}
+
+/*===== ESTILOS LG =====*/
+@media only screen and (min-width: 992px) {
+    .navbar__car {
+        font-size: 2rem;
+    }
+}

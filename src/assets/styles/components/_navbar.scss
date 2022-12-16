@@ -11,7 +11,6 @@
     /* Menú hamburguesa */
     .navbar-toggler {
         border: $myDarkBlue solid 1px;
-        color: $myDarkBlue;
         font-size: 1.5rem;
         padding: 5px;
 
@@ -26,9 +25,16 @@
 
     /* Barra de navegación - Enlaces */
     .navbar__links a{
+        color: $myDarkBlue;
+        opacity: 0.9;
+
         &:hover {
             color: $myPink;
         }
+    }
+
+    .nav-link.active {
+        color: $myDarkBlue;
     }
 
     /* Form */
@@ -46,9 +52,9 @@
 
         .navbar__button {
             background-color: $myDarkBlue;
-            border: none;
             font-family: $myTitle;
             font-size: 1.3rem;
+            border: #ffffff 1px solid;
 
             &:hover {
                 background-color: $myPink;

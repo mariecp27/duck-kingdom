@@ -4,6 +4,7 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import logo from '../assets/images/full-logo.png'
+import CartWidget from './CartWidget';
 
 function MyNavBar() {
   return (
@@ -19,6 +20,7 @@ function MyNavBar() {
             <Nav.Link href="#">Series</Nav.Link>
             <Nav.Link href="#">Juegos</Nav.Link>
             <Nav.Link href="#">Divertidos</Nav.Link>
+            <CartWidget />
           </Nav>
           <Form className="d-flex navbar__form">
             <Form.Control

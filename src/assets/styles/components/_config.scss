@@ -22,3 +22,8 @@ html{
     font-family: $myText;
     overflow-x: hidden;
 }
+
+/* Transiciones */
+@mixin myTransition {
+    transition: all 0.15s;
+}
