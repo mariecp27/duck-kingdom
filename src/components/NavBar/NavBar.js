@@ -3,14 +3,13 @@ import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import logo from '../../assets/images/full-logo.png'
 import CartWidget from './CartWidget';
 
 function MyNavBar() {
   return (
     <Navbar expand="lg" className="main__navbar">
       <Container fluid>
-        <img src = {logo} alt = "Logo" className = "navbar__logo" />
+        <img src = "/duck-kingdom/assets/images/full-logo.png" alt = "Logo" className = "navbar__logo" />
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav

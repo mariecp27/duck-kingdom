@@ -3,9 +3,9 @@
         "id": 1,
         "name": "Batman",
         "source": "DC Comics",
-        "price": 300000,
+        "price": 250000,
         "height": "8.9 cm",
-        "image": "../assets/images/products/product1.png",
+        "image": "/duck-kingdom/assets/images/products/product1.png",
         "category": "comics",
         "stock": 20
     },
@@ -15,7 +15,7 @@
         "source": "Metal Gear",
         "price": 79000,
         "height": "8.9 cm",
-        "image": "../assets/images/products/product2.png",
+        "image": "/duck-kingdom/assets/images/products/product2.png",
         "category": "games",
         "stock": 15
     },
@@ -25,7 +25,7 @@
         "source": "DC Comics",
         "price": 500000,
         "height": "8.9 cm",
-        "image": "../assets/images/products/product3.png",
+        "image": "/duck-kingdom/assets/images/products/product3.png",
         "category": "comics",
         "stock": 20
     },
@@ -35,7 +35,7 @@
         "source": "Jurassic Park",
         "price": 124000,
         "height": "8.9 cm",
-        "image": "../assets/images/products/product4.png",
+        "image": "/duck-kingdom/assets/images/products/product4.png",
         "category": "movies",
         "stock": 10
     },
@@ -45,7 +45,7 @@
         "source": "Ghostbusters",
         "price": 110000,
         "height": "8.9 cm",
-        "image": "../assets/images/products/product5.png",
+        "image": "/duck-kingdom/assets/images/products/product5.png",
         "category": "movies",
         "stock": 20
     },
@@ -55,7 +55,7 @@
         "source": "Back to the Future",
         "price": 85000,
         "height": "8.9 cm",
-        "image": "../assets/images/products/product6.png",
+        "image": "/duck-kingdom/assets/images/products/product6.png",
         "category": "movies",
         "stock": 20
     },
@@ -65,7 +65,7 @@
         "source": "DC Comics",
         "price": 140000,
         "height": "8.9 cm",
-        "image": "../assets/images/products/product7.png",
+        "image": "/duck-kingdom/assets/images/products/product7.png",
         "category": "comics",
         "stock": 15
     },
@@ -75,7 +75,7 @@
         "source": "Borderlands",
         "price": 120000,
         "height": "8.9 cm",
-        "image": "../assets/images/products/product8.png",
+        "image": "/duck-kingdom/assets/images/products/product8.png",
         "category": "games",
         "stock": 20
     },
@@ -85,7 +85,7 @@
         "source": "Lord of the Rings",
         "price": 505000,
         "height": "8.9 cm",
-        "image": "../assets/images/products/product9.png",
+        "image": "/duck-kingdom/assets/images/products/product9.png",
         "category": "movies",
         "stock": 10
     },
@@ -95,7 +95,7 @@
         "source": "Resident Evil",
         "price": 85000,
         "height": "8.9 cm",
-        "image": "../assets/images/products/product10.png",
+        "image": "/duck-kingdom/assets/images/products/product10.png",
         "category": "games",
         "stock": 15
     },
@@ -105,7 +105,7 @@
         "source": "Star Trek",
         "price": 150000,
         "height": "8.9 cm",
-        "image": "../assets/images/products/product11.png",
+        "image": "/duck-kingdom/assets/images/products/product11.png",
         "category": "movies",
         "stock": 20
     },
@@ -115,7 +115,7 @@
         "source": "DC Comics",
         "price": 85000,
         "height": "8.9 cm",
-        "image": "../assets/images/products/product12.png",
+        "image": "/duck-kingdom/assets/images/products/product12.png",
         "category": "comics",
         "stock": 10
     },
@@ -125,7 +125,7 @@
         "source": "Back to the Future",
         "price": 85000,
         "height": "8.9 cm",
-        "image": "../assets/images/products/product13.png",
+        "image": "/duck-kingdom/assets/images/products/product13.png",
         "category": "movies",
         "stock": 15
     },
@@ -135,7 +135,7 @@
         "source": "Chucky",
         "price": 90000,
         "height": "8.9 cm",
-        "image": "../assets/images/products/product14.png",
+        "image": "/duck-kingdom/assets/images/products/product14.png",
         "category": "movies",
         "stock": 20
     },
@@ -145,7 +145,7 @@
         "source": "Minions",
         "price": 85000,
         "height": "8.9 cm",
-        "image": "../assets/images/products/product15.png",
+        "image": "/duck-kingdom/assets/images/products/product15.png",
         "category": "movies",
         "stock": 20
     },
@@ -155,7 +155,7 @@
         "source": "Lord of the Rings",
         "price": 200000,
         "height": "8.9 cm",
-        "image": "../assets/images/products/product16.png",
+        "image": "/duck-kingdom/assets/images/products/product16.png",
         "category": "movies",
         "stock": 10
     },
@@ -165,18 +165,18 @@
         "source": "It",
         "price": 150000,
         "height": "8.9 cm",
-        "image": "../assets/images/products/product17.png",
+        "image": "/duck-kingdom/assets/images/products/product17.png",
         "category": "movies",
         "stock": 15
     },
     {
         "id": 18,
-        "name": "Chandler Bing",
-        "source": "Friends",
+        "name": "Gimli",
+        "source": "Lord of the Rings",
         "price": 85000,
         "height": "8.9 cm",
-        "image": "../assets/images/products/product18.png",
-        "category": "series",
+        "image": "/duck-kingdom/assets/images/products/product18.png",
+        "category": "movies",
         "stock": 20
     },
     {
@@ -185,7 +185,7 @@
         "source": "Rocky",
         "price": 100000,
         "height": "8.9 cm",
-        "image": "../assets/images/products/product19.png",
+        "image": "/duck-kingdom/assets/images/products/product19.png",
         "category": "movies",
         "stock": 15
     },
@@ -195,7 +195,7 @@
         "source": "DC Comics",
         "price": 160000,
         "height": "8.9 cm",
-        "image": "../assets/images/products/product20.png",
+        "image": "/duck-kingdom/assets/images/products/product20.png",
         "category": "comics",
         "stock": 10
     },
@@ -205,7 +205,7 @@
         "source": "God of War",
         "price": 200000,
         "height": "8.9 cm",
-        "image": "../assets/images/products/product21.png",
+        "image": "/duck-kingdom/assets/images/products/product21.png",
         "category": "games",
         "stock": 15
     },
@@ -215,7 +215,7 @@
         "source": "The Last of Us",
         "price": 150000,
         "height": "8.9 cm",
-        "image": "../assets/images/products/product22.png",
+        "image": "/duck-kingdom/assets/images/products/product22.png",
         "category": "games",
         "stock": 10
     },
@@ -225,7 +225,7 @@
         "source": "Ghostbusters",
         "price": 215000,
         "height": "8.9 cm",
-        "image": "../assets/images/products/product23.png",
+        "image": "/duck-kingdom/assets/images/products/product23.png",
         "category": "movies",
         "stock": 10
     },
@@ -235,17 +235,17 @@
         "source": "Jurassic Park",
         "price": 125000,
         "height": "8.9 cm",
-        "image": "../assets/images/products/product24.png",
+        "image": "/duck-kingdom/assets/images/products/product24.png",
         "category": "movies",
         "stock": 20
     },
     {
-        "id": 1,
+        "id": 25,
         "name": "Ada Wong Duck",
         "source": "Resident Evil",
         "price": 85000,
         "height": "8.9 cm",
-        "image": "../assets/images/products/product25.png",
+        "image": "/duck-kingdom/assets/images/products/product25.png",
         "category": "games",
         "stock": 15
     }
