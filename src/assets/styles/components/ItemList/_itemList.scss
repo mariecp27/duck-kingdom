@@ -1,8 +1,16 @@
-.item-list-container {
+.item-list {
+    width: 100%;
+    
     h1 {
         font-family: $myTitle;
         text-align: center;
         margin: 10px;
         color: $myDarkBlue;
+        font-size: 2.5rem;
+    }
+
+    hr {
+        width: 80%;
+        margin: 0 auto;
     }
 }

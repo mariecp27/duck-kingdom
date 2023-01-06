@@ -1,0 +1,87 @@
+.item {
+    text-align: center;
+    margin: 10px 0;
+    font-family: $myText;
+    color: $myDarkBlue;
+    border: 1px $myOrange solid;
+    padding: 15px;
+    border-radius: 20px;
+    @include myTransition;
+
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid #ffb8037f;
+
+    &:hover {
+        background-color: #ffb8037f;
+
+        & img {
+            transform: scale(1.1);
+        }
+    }
+
+    img {
+        width: 80%;
+        margin-bottom: 10px;
+        @include myTransition;
+    }
+
+    h3 {
+        font-family: $myTitle;
+        font-weight: bold;
+        font-size: 2rem;
+    }
+
+    h4 {
+        font-size: 1.5rem;
+    }
+
+    strong {
+        display: block;
+        font-size: 1.5rem;
+    }
+
+    button {
+        border: 1px solid $myOrange;
+        border-radius: 20px;
+        background: $myOrange;
+        padding: 5px 20px;
+        font-size: 1.5rem;
+        margin: 10px;
+        color: $myDarkBlue;
+
+        &:hover {
+            background: $myYellow;
+        }
+    }
+}
+
+/*===== ESTILOS MOBILE (OTHERS) - SM =====*/
+@media only screen and (min-width: 576px) {
+    .item {
+        margin: 10px;
+    } 
+}
+
+/*===== ESTILOS LG =====*/
+@media only screen and (min-width: 992px) {
+    .item {
+        margin: 15px;
+
+        img {
+            width: 50%;
+        }
+    } 
+}
+
+/*===== ESTILOS XL =====*/
+@media only screen and (min-width: 1200px) {
+    .item {
+        img {
+            width: 70%;
+        }
+    } 
+}

@@ -31,12 +31,12 @@
     },
     {
         "id": 4,
-        "name": "John Hammond",
-        "source": "Jurassic Park",
-        "price": 124000,
+        "name": "Ryo Hazuki",
+        "source": "Shenmue",
+        "price": 85000,
         "height": "8.9 cm",
         "image": "/duck-kingdom/assets/images/products/product4.png",
-        "category": "movies",
+        "category": "games",
         "stock": 10
     },
     {
@@ -101,9 +101,9 @@
     },
     {
         "id": 11,
-        "name": "James Tiberius Kirk",
+        "name": "Deanna Troi",
         "source": "Star Trek",
-        "price": 150000,
+        "price": 85000,
         "height": "8.9 cm",
         "image": "/duck-kingdom/assets/images/products/product11.png",
         "category": "movies",
@@ -111,7 +111,7 @@
     },
     {
         "id": 12,
-        "name": "Joker",
+        "name": "Two-Face",
         "source": "DC Comics",
         "price": 85000,
         "height": "8.9 cm",
@@ -161,12 +161,12 @@
     },
     {
         "id": 17,
-        "name": "Pennywise",
-        "source": "It",
-        "price": 150000,
+        "name": "Oscar",
+        "source": "Dark Souls",
+        "price": 90000,
         "height": "8.9 cm",
         "image": "/duck-kingdom/assets/images/products/product17.png",
-        "category": "movies",
+        "category": "games",
         "stock": 15
     },
     {
@@ -181,12 +181,12 @@
     },
     {
         "id": 19,
-        "name": "Rocky Balboa",
-        "source": "Rocky",
+        "name": "Chris Redfield",
+        "source": "Resident Evil",
         "price": 100000,
         "height": "8.9 cm",
         "image": "/duck-kingdom/assets/images/products/product19.png",
-        "category": "movies",
+        "category": "games",
         "stock": 15
     },
     {
@@ -211,7 +211,7 @@
     },
     {
         "id": 22,
-        "name": "Clicker",
+        "name": "Joel",
         "source": "The Last of Us",
         "price": 150000,
         "height": "8.9 cm",
