@@ -50,6 +50,17 @@
         .item-detail__text-container-price {
             font-size: 2rem;
         }
+
+        .item-detail__text-container-back {
+            background: none;
+            border: none;
+            color: $myOrange;
+            font-weight: bold;
+
+            &:hover {
+                color: $myYellow;
+            }
+        }
     }
 }
 

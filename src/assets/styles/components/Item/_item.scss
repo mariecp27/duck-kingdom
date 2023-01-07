@@ -44,16 +44,20 @@
         font-size: 1.5rem;
     }
 
-    button {
+    .item_link {
         border: 1px solid $myOrange;
         border-radius: 20px;
         background: $myOrange;
         padding: 5px 20px;
         font-size: 1.5rem;
-        margin: 10px;
+        display: block;
+        width: 60%;
+        margin: 10px auto;
         color: $myDarkBlue;
+        text-decoration: none;
 
         &:hover {
+            font-weight: bold;
             background: $myYellow;
         }
     }

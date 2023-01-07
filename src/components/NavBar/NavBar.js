@@ -1,24 +1,54 @@
+import CartWidget from "./CartWidget";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import CartWidget from "./CartWidget";
+import { Link, NavLink } from "react-router-dom";
 
 function MyNavBar() {
+
+  const activeClassName = "activeLink";
+
   return (
     <Navbar expand="lg" className="main__navbar">
       <Container fluid>
-        <img src = "/duck-kingdom/assets/images/full-logo.png" alt = "Logo" className = "navbar__logo" />
+        <Link to={"/"}>
+          <img src = "/duck-kingdom/assets/images/full-logo.png" alt = "Logo" className = "navbar__logo" />
+        </Link>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
             className="me-auto my-2 my-lg-0 d-flex align-items-center flex-md-row justify-content-md-around navbar__links"
           >
-            <Nav.Link href="#">Todos los patitos</Nav.Link>
-            <Nav.Link href="#">Series</Nav.Link>
-            <Nav.Link href="#">Juegos</Nav.Link>
-            <Nav.Link href="#">Divertidos</Nav.Link>
+            <NavLink
+              to={"/"}
+              className={({ isActive }) =>
+                isActive ? activeClassName : undefined
+              }
+              >Todos los patitos
+            </NavLink>
+            <NavLink
+              to={"/category/comics"}
+              className={({ isActive }) =>
+                isActive ? activeClassName : undefined
+              }
+              >Patitos de comics
+            </NavLink>
+            <NavLink
+              to={"/category/games"}
+              className={({ isActive }) =>
+                isActive ? activeClassName : undefined
+              }
+              >Patitos de juegos
+            </NavLink>
+            <NavLink
+              to={"/category/movies"}
+              className={({ isActive }) =>
+                isActive ? activeClassName : undefined
+              }
+              >Patitos de películas
+            </NavLink>
             <CartWidget />
           </Nav>
           <Form className="d-flex navbar__form">

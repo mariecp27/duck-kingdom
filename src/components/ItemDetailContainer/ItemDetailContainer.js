@@ -1,14 +1,17 @@
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import { requestProductById } from "../../helpers/requestData";
 import ItemDetail from "../ItemDetail/ItemDetail";
+import Spinner from "../Spinner/Spinner";
 
-function ItemDetailContainer( { productId } ) {
+function ItemDetailContainer() {
 
     const [product, setProduct] = useState(null);
     const [error, setError] = useState(null);
+    const { itemId } = useParams();
 
     useEffect( () => {
-        requestProductById(productId)
+        requestProductById(Number(itemId))
             .then( (res) => {
                 setProduct(res);
                 setError(null);
@@ -16,7 +19,7 @@ function ItemDetailContainer( { productId } ) {
             .catch( (err) => {
                 setError(err.error);
             });
-    }, [productId]);
+    }, [itemId]);
 
     return (
         <div>
@@ -25,7 +28,7 @@ function ItemDetailContainer( { productId } ) {
                     ? <h1>{error}</h1>
                     : product
                         ? <ItemDetail {...product} />
-                        : <h1>Cargando...</h1>
+                        : <Spinner />
             }
         </div>
     )
