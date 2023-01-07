@@ -1,0 +1,51 @@
+.item-count {
+    div {
+        display: flex;
+        justify-content: center;
+        justify-content: center;
+        color: $myDarkBlue;
+        font-size: 1.5rem;
+        
+        button {
+            background: $myOrange;
+            padding: 5px 20px;
+            color: $myDarkBlue;
+            font-weight: bold;
+            border: 1px solid $myOrange;
+            
+            &.item-count_subtract{
+                border-top-left-radius: 20px;
+                border-bottom-left-radius: 20px;
+            }
+
+            &.item-count_add{
+                border-top-right-radius: 20px;
+                border-bottom-right-radius: 20px;
+            }
+    
+            &:hover {
+                background: $myYellow;
+            }
+        }
+
+        strong {
+            padding: 5px 20px;
+            border: 1px solid $myOrange;
+            background: transparent;
+        }
+    }
+
+    .item-count_add-to-car {
+        border: 1px solid $myOrange;
+        border-radius: 20px;
+        background: $myOrange;
+        padding: 5px 20px;
+        font-size: 1.5rem;
+        margin: 10px;
+        color: $myDarkBlue;
+
+        &:hover {
+            background: $myYellow;
+        }
+    }
+}

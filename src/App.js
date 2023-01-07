@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <NavBar />
       {/* <ItemListContainer /> */}
-      <ItemDetailContainer productId={16} />
+      <ItemDetailContainer productId={19} />
     </div>
   );
 }
