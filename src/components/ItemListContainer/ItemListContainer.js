@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import { requestAllProducts } from "../../helpers/requestData";
+import Spinner from "../Spinner/Spinner";
 import ItemList from "../ItemList/ItemList";
 
 function ItemListContainer() {
 
     const [products, setProducts] = useState([]);
-
+    
     useEffect( () => {
         requestAllProducts()
             .then( (res) => {
@@ -18,7 +19,12 @@ function ItemListContainer() {
 
     return (
         <div>
-            <ItemList products={products}/>
+            {
+                products.length === 0
+                    ? <Spinner />
+                    : <ItemList products={products} />
+            }
+
         </div>
     );
 }
