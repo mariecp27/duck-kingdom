@@ -1,0 +1,104 @@
+.item-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: $myDarkBlue;
+    font-size: 1.5rem;
+    min-height: 80vh;
+
+    img {
+        width: 65%;
+        margin: 20px;
+    }
+
+    .item-detail__text-container {
+        width: 85%;
+        margin: 20px auto;
+        font-family: $myText;
+        border: 1px $myOrange solid;
+        border-radius: 20px;
+        @include myTransition;
+    
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(2px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid #ffb8037f;
+        
+        div {
+            padding: 10px;
+        }
+
+        h3 {
+            font-size: 2.5rem;
+            background: #ffb8037f;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            padding: 10px 0 5px 0;
+            margin: 0;
+            font-weight: bold;
+        }
+
+        em {
+            background: #ffb8037f;
+            display: block;
+        }
+
+        .item-detail__text-container-price {
+            font-size: 2rem;
+        }
+    }
+}
+
+/*===== ESTILOS MOBILE (OTHERS) - SM =====*/
+@media only screen and (min-width: 576px) {
+    .item-detail {
+        img {
+            width: 50%;
+        }
+    }
+}
+
+/*===== ESTILOS TABLET - MD =====*/
+@media only screen and (min-width: 768px) {
+    .item-detail {
+        flex-direction: row;
+
+        img {
+            width: 40%;
+        }
+
+        .item-detail__text-container {
+            margin: 20px;
+        }
+    }
+}
+
+/*===== ESTILOS LG =====*/
+@media only screen and (min-width: 992px) {
+    .item-detail {
+        img {
+            width: 30%;
+        }
+
+        .item-detail__text-container {
+            width: 50%;
+        }
+    }
+}
+
+/*===== ESTILOS XL =====*/
+@media only screen and (min-width: 1200px) {
+    .item-detail {
+        img {
+            width: 25%;
+        }
+
+        .item-detail__text-container {
+            width: 40%;
+        }
+    }
+}

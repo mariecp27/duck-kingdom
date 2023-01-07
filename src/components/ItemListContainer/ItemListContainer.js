@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { requestData } from "../../helpers/requestData";
+import { requestAllProducts } from "../../helpers/requestData";
 import ItemList from "../ItemList/ItemList";
 
 function ItemListContainer() {
@@ -7,7 +7,7 @@ function ItemListContainer() {
     const [products, setProducts] = useState([]);
 
     useEffect( () => {
-        requestData()
+        requestAllProducts()
             .then( (res) => {
                 setProducts(res);
             })
