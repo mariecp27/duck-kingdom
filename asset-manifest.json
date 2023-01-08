@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/duck-kingdom/static/css/main.9636b06d.css",
-    "main.js": "/duck-kingdom/static/js/main.fff3d498.js",
+    "main.js": "/duck-kingdom/static/js/main.ff59a220.js",
     "index.html": "/duck-kingdom/index.html",
     "main.9636b06d.css.map": "/duck-kingdom/static/css/main.9636b06d.css.map",
-    "main.fff3d498.js.map": "/duck-kingdom/static/js/main.fff3d498.js.map"
+    "main.ff59a220.js.map": "/duck-kingdom/static/js/main.ff59a220.js.map"
   },
   "entrypoints": [
     "static/css/main.9636b06d.css",
-    "static/js/main.fff3d498.js"
+    "static/js/main.ff59a220.js"
   ]
 }
