@@ -1,0 +1,18 @@
+.social-media {
+    padding: 10px 0;
+
+    h3 {
+        font-weight: normal;
+        font-size: 1.5rem;
+    }
+
+    .social-media_links a{
+        color: #ffffffff;
+        font-size: 2.5rem;
+        padding: 5px;
+
+        &:hover {
+            color: $myOrange;
+        }
+    }
+}

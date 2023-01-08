@@ -1,0 +1,29 @@
+.rights {
+    background: $myPink;
+    font-size: 1rem;
+    padding-bottom: 10px;
+
+    .rights_icons {
+        color: #ffffff;
+        margin: 5px;
+        font-size: 1.5rem;
+        text-decoration: none;
+
+        &:hover {
+            color: $myOrange;
+        }
+    }
+
+    p {
+        margin: 0;
+        
+        a {
+            color: #ffffffff;
+            text-decoration: none;
+
+            &:hover {
+                color: $myOrange;
+            }
+        }
+    }
+}
