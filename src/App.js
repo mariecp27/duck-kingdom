@@ -14,10 +14,15 @@ function App() {
 
         <Routes>
           <Route path="/" element={ <ItemListContainer /> } />
+          <Route path="/duck-kingdom" element={ <ItemListContainer /> } />
           <Route path="/search" element={ <ItemListContainer /> } />
+
           <Route path="/search/:itemName" element={ <ItemListContainer /> } />
+
           <Route path="/category/:categoryId" element={ <ItemListContainer /> } />
+
           <Route path="/item/:itemId" element={ <ItemDetailContainer /> } />
+
           <Route path="*" element={ <NotFound /> } />
         </Routes>
 
