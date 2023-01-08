@@ -16,7 +16,7 @@ function Item( { id, image, name, source, price } ) {
             data-aos="fade-up"
             data-aos-duration="1500"
             data-aos-once="true">
-            <img src = {image} alt = {name}/>
+            <img src={process.env.PUBLIC_URL + image} alt={name}/>
             <h3>{name}</h3>
             <h4>{source}</h4>
             <strong>{formatterPeso(price)}</strong>

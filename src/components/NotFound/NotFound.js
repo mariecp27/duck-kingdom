@@ -23,7 +23,7 @@ function NotFound() {
             data-aos="fade-up"
             data-aos-duration="1500"
             data-aos-once="true">
-            <img src="/duck-kingdom/assets/images/404.png" alt="404"/>
+            <img src={process.env.PUBLIC_URL + "/assets/images/404.png"} alt="404"/>
             <h3>¡Oh!, no hay nada aquí</h3>
             <button className="item-detail__text-container-back" onClick={handleHome}><FontAwesomeIcon icon = { faCircleArrowLeft } />Ir al inicio</button>
         </div>

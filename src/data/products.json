@@ -7,7 +7,7 @@
         "price": 250000,
         "height": "8.9 cm",
         "material": "Policloruro de vinilo",
-        "image": "/duck-kingdom/assets/images/products/product1.png",
+        "image": "/assets/images/products/product1.png",
         "category": "comics",
         "stock": 20
     },
@@ -19,7 +19,7 @@
         "price": 79000,
         "height": "8.9 cm",
         "material": "Policloruro de vinilo",
-        "image": "/duck-kingdom/assets/images/products/product2.png",
+        "image": "/assets/images/products/product2.png",
         "category": "games",
         "stock": 15
     },
@@ -31,7 +31,7 @@
         "price": 500000,
         "height": "8.9 cm",
         "material": "Policloruro de vinilo",
-        "image": "/duck-kingdom/assets/images/products/product3.png",
+        "image": "/assets/images/products/product3.png",
         "category": "comics",
         "stock": 20
     },
@@ -43,7 +43,7 @@
         "price": 85000,
         "height": "8.9 cm",
         "material": "Policloruro de vinilo",
-        "image": "/duck-kingdom/assets/images/products/product4.png",
+        "image": "/assets/images/products/product4.png",
         "category": "games",
         "stock": 10
     },
@@ -55,7 +55,7 @@
         "price": 110000,
         "height": "8.9 cm",
         "material": "Policloruro de vinilo",
-        "image": "/duck-kingdom/assets/images/products/product5.png",
+        "image": "/assets/images/products/product5.png",
         "category": "movies",
         "stock": 20
     },
@@ -67,7 +67,7 @@
         "price": 85000,
         "height": "8.9 cm",
         "material": "Policloruro de vinilo",
-        "image": "/duck-kingdom/assets/images/products/product6.png",
+        "image": "/assets/images/products/product6.png",
         "category": "movies",
         "stock": 20
     },
@@ -79,7 +79,7 @@
         "price": 140000,
         "height": "8.9 cm",
         "material": "Policloruro de vinilo",
-        "image": "/duck-kingdom/assets/images/products/product7.png",
+        "image": "/assets/images/products/product7.png",
         "category": "comics",
         "stock": 15
     },
@@ -91,7 +91,7 @@
         "price": 120000,
         "height": "8.9 cm",
         "material": "Policloruro de vinilo",
-        "image": "/duck-kingdom/assets/images/products/product8.png",
+        "image": "/assets/images/products/product8.png",
         "category": "games",
         "stock": 20
     },
@@ -103,7 +103,7 @@
         "price": 505000,
         "height": "8.9 cm",
         "material": "Policloruro de vinilo",
-        "image": "/duck-kingdom/assets/images/products/product9.png",
+        "image": "/assets/images/products/product9.png",
         "category": "movies",
         "stock": 10
     },
@@ -115,7 +115,7 @@
         "price": 85000,
         "height": "8.9 cm",
         "material": "Policloruro de vinilo",
-        "image": "/duck-kingdom/assets/images/products/product10.png",
+        "image": "/assets/images/products/product10.png",
         "category": "games",
         "stock": 15
     },
@@ -127,7 +127,7 @@
         "price": 85000,
         "height": "8.9 cm",
         "material": "Policloruro de vinilo",
-        "image": "/duck-kingdom/assets/images/products/product11.png",
+        "image": "/assets/images/products/product11.png",
         "category": "movies",
         "stock": 20
     },
@@ -139,7 +139,7 @@
         "price": 85000,
         "height": "8.9 cm",
         "material": "Policloruro de vinilo",
-        "image": "/duck-kingdom/assets/images/products/product12.png",
+        "image": "/assets/images/products/product12.png",
         "category": "comics",
         "stock": 10
     },
@@ -151,7 +151,7 @@
         "price": 85000,
         "height": "8.9 cm",
         "material": "Policloruro de vinilo",
-        "image": "/duck-kingdom/assets/images/products/product13.png",
+        "image": "/assets/images/products/product13.png",
         "category": "movies",
         "stock": 15
     },
@@ -163,7 +163,7 @@
         "price": 90000,
         "height": "8.9 cm",
         "material": "Policloruro de vinilo",
-        "image": "/duck-kingdom/assets/images/products/product14.png",
+        "image": "/assets/images/products/product14.png",
         "category": "movies",
         "stock": 20
     },
@@ -175,7 +175,7 @@
         "price": 85000,
         "height": "8.9 cm",
         "material": "Policloruro de vinilo",
-        "image": "/duck-kingdom/assets/images/products/product15.png",
+        "image": "/assets/images/products/product15.png",
         "category": "movies",
         "stock": 20
     },
@@ -187,7 +187,7 @@
         "price": 200000,
         "height": "8.9 cm",
         "material": "Policloruro de vinilo",
-        "image": "/duck-kingdom/assets/images/products/product16.png",
+        "image": "/assets/images/products/product16.png",
         "category": "movies",
         "stock": 10
     },
@@ -199,7 +199,7 @@
         "price": 90000,
         "height": "8.9 cm",
         "material": "Policloruro de vinilo",
-        "image": "/duck-kingdom/assets/images/products/product17.png",
+        "image": "/assets/images/products/product17.png",
         "category": "games",
         "stock": 15
     },
@@ -211,7 +211,7 @@
         "price": 85000,
         "height": "8.9 cm",
         "material": "Policloruro de vinilo",
-        "image": "/duck-kingdom/assets/images/products/product18.png",
+        "image": "/assets/images/products/product18.png",
         "category": "movies",
         "stock": 20
     },
@@ -223,7 +223,7 @@
         "price": 100000,
         "height": "8.9 cm",
         "material": "Policloruro de vinilo",
-        "image": "/duck-kingdom/assets/images/products/product19.png",
+        "image": "/assets/images/products/product19.png",
         "category": "games",
         "stock": 15
     },
@@ -235,7 +235,7 @@
         "price": 160000,
         "height": "8.9 cm",
         "material": "Policloruro de vinilo",
-        "image": "/duck-kingdom/assets/images/products/product20.png",
+        "image": "/assets/images/products/product20.png",
         "category": "comics",
         "stock": 10
     },
@@ -247,7 +247,7 @@
         "price": 200000,
         "height": "8.9 cm",
         "material": "Policloruro de vinilo",
-        "image": "/duck-kingdom/assets/images/products/product21.png",
+        "image": "/assets/images/products/product21.png",
         "category": "games",
         "stock": 15
     },
@@ -259,7 +259,7 @@
         "price": 150000,
         "height": "8.9 cm",
         "material": "Policloruro de vinilo",
-        "image": "/duck-kingdom/assets/images/products/product22.png",
+        "image": "/assets/images/products/product22.png",
         "category": "games",
         "stock": 10
     },
@@ -271,7 +271,7 @@
         "price": 215000,
         "height": "8.9 cm",
         "material": "Policloruro de vinilo",
-        "image": "/duck-kingdom/assets/images/products/product23.png",
+        "image": "/assets/images/products/product23.png",
         "category": "movies",
         "stock": 10
     },
@@ -283,7 +283,7 @@
         "price": 125000,
         "height": "8.9 cm",
         "material": "Policloruro de vinilo",
-        "image": "/duck-kingdom/assets/images/products/product24.png",
+        "image": "/assets/images/products/product24.png",
         "category": "movies",
         "stock": 20
     },
@@ -295,7 +295,7 @@
         "price": 85000,
         "height": "8.9 cm",
         "material": "Policloruro de vinilo",
-        "image": "/duck-kingdom/assets/images/products/product25.png",
+        "image": "/assets/images/products/product25.png",
         "category": "games",
         "stock": 15
     }

@@ -25,7 +25,7 @@ function ItemDetail( { image, name, source, description, price, height, material
             data-aos="fade-up"
             data-aos-duration="1500"
             data-aos-once="true">
-            <img src = {image} alt = {name}/>
+            <img src={process.env.PUBLIC_URL + image} alt={name}/>
             <div className="item-detail__text-container">
                 <div>
                     <h3>{name}</h3>

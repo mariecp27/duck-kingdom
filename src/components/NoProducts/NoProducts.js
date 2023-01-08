@@ -23,7 +23,7 @@ function NoProducts() {
             data-aos="fade-up"
             data-aos-duration="1500"
             data-aos-once="true">
-            <img src="/duck-kingdom/assets/images/ups.png" alt="No products"/>
+            <img src={process.env.PUBLIC_URL + "/assets/images/ups.png"} alt="No products"/>
             <h3>¡Oh!, de momento, no hay patitos con el nombre o categoría ingresados</h3>
             <button className="item-detail__text-container-back" onClick={handleHome}><FontAwesomeIcon icon = { faCircleArrowLeft } />Ir al inicio</button>
         </div>

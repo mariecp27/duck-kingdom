@@ -29,7 +29,7 @@ function MyNavBar() {
     <Navbar expand="lg" className="main__navbar">
       <Container fluid>
         <Link to={"/"}>
-          <img src = "/duck-kingdom/assets/images/full-logo.png" alt = "Logo" className = "navbar__logo" />
+          <img src={process.env.PUBLIC_URL + "/assets/images/full-logo.png"} alt = "Logo" className = "navbar__logo" />
         </Link>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">

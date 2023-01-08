@@ -15,7 +15,7 @@ function ItemList( { products } ) {
             data-aos="fade-up"
             data-aos-duration="1500"
             data-aos-once="true">
-            <img src="/duck-kingdom/assets/images/title.png" alt="title" className="item-list_title" />
+            <img src={process.env.PUBLIC_URL + "/assets/images/title.png"} alt="Título" className="item-list_title" />
             <hr />
             <div className="container-fluid">
                 <section className="row row-cols-lg-5 justify-content-center m-0">
