@@ -1,17 +1,43 @@
 .item-list {
     width: 100%;
     min-height: 70vh;
-    
-    h1 {
-        font-family: $myTitle;
-        text-align: center;
-        margin: 10px;
-        color: $myDarkBlue;
-        font-size: 2.5rem;
-    }
+    text-align: center;
 
+    .item-list_title {
+        width: 70%;
+        opacity: 0.9;
+        margin: 20px 0;
+    }
+    
     hr {
         width: 80%;
         margin: 0 auto;
+    }
+}
+
+/*===== ESTILOS TABLET - MD =====*/
+@media only screen and (min-width: 768px) {
+    .item-list {
+        .item-list_title {
+            width: 50%;
+        }
+    }
+}
+
+/*===== ESTILOS LG =====*/
+@media only screen and (min-width: 992px) {
+    .item-list {
+        .item-list_title {
+            width: 40%;
+        }
+    }
+}
+
+/*===== ESTILOS XL =====*/
+@media only screen and (min-width: 1200px) {
+    .item-list {
+        .item-list_title {
+            width: 25%;
+        }
     }
 }
