@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { requestProductById } from "../../helpers/requestData";
 import ItemDetail from "../ItemDetail/ItemDetail";
+import NotFound from "../NotFound/NotFound";
 import Spinner from "../Spinner/Spinner";
 
 function ItemDetailContainer() {
@@ -25,7 +26,7 @@ function ItemDetailContainer() {
         <div>
             {
                 error
-                    ? <h1>{error}</h1>
+                    ? <NotFound />
                     : product
                         ? <ItemDetail {...product} />
                         : <Spinner />

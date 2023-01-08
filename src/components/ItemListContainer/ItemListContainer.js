@@ -7,13 +7,16 @@ import ItemList from "../ItemList/ItemList";
 function ItemListContainer() {
 
     const [products, setProducts] = useState([]);
-    const { categoryId } = useParams();
+    const { itemName, categoryId } = useParams();
 
     useEffect( () => {
         setProducts([]);
         requestAllProducts()
             .then( (res) => {
-                if (categoryId) {
+                if (itemName) {
+                    let name = itemName.toLowerCase();
+                    setProducts(res.filter( product => product.name.toLowerCase().includes(name)));
+                } else if (categoryId) {
                     setProducts(res.filter( product => product.category === categoryId ));
                 } else {
                     setProducts(res);
@@ -22,7 +25,7 @@ function ItemListContainer() {
             .catch( (err) => {
                 console.log(err);
             });
-    }, [categoryId]);
+    }, [ itemName, categoryId]);
 
     return (
         <div>

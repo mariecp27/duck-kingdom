@@ -1,0 +1,58 @@
+.not-found {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+
+    img {
+        width: 70%;
+    }
+
+    h3 {
+        color: $myDarkBlue;
+        margin: 10px;
+        font-weight: 400;
+        font-size: 2rem;
+    }
+
+    button {
+        background: none;
+        border: none;
+        color: $myOrange;
+        font-weight: bold;
+
+        &:hover {
+            color: $myYellow;
+        }
+    }
+}
+
+/*===== ESTILOS MOBILE (OTHERS) - SM =====*/
+@media only screen and (min-width: 576px) {
+    .not-found {
+        img {
+            width: 50%;
+        }
+    }
+}
+
+/*===== ESTILOS MOBILE (OTHERS) - MD =====*/
+@media only screen and (min-width: 768px) {
+    .not-found {
+        img {
+            width: 30%;
+        }
+    }
+}
+
+/*===== ESTILOS XL =====*/
+@media only screen and (min-width: 1200px) {
+    .not-found {
+        img {
+            width: 20%;
+        }
+    }
+}

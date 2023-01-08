@@ -1,15 +1,30 @@
+import { Link, NavLink } from "react-router-dom";
+import { useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import CartWidget from "./CartWidget";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { Link, NavLink } from "react-router-dom";
 
 function MyNavBar() {
 
+  const productName = useRef();
+  const navigate = useNavigate();
   const activeClassName = "activeLink";
+  
+  const handleSearch = () => {
+    navigate(`/search/${productName.current.value}`);
+  }
 
+  const avoidReload = (e) => {
+    if (e.keyCode === 13 ) {
+      e.preventDefault();
+      handleSearch();
+    }  
+  }
+  
   return (
     <Navbar expand="lg" className="main__navbar">
       <Container fluid>
@@ -57,8 +72,10 @@ function MyNavBar() {
               placeholder="¿Qué patito buscas?"
               className="me-2"
               aria-label="Search"
+              ref = {productName}
+              onKeyDown = {avoidReload}
             />
-            <Button className="navbar__button">Buscar</Button>
+            <Button className="navbar__button" onClick={handleSearch}>Buscar</Button>
           </Form>
         </Navbar.Collapse>
       </Container>
