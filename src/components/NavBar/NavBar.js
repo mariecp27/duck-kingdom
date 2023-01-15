@@ -18,7 +18,7 @@ function MyNavBar() {
     navigate(`/search/${productName.current.value}`);
   }
 
-  const avoidReload = (e) => {
+  const handleAvoidReload = (e) => {
     if (e.keyCode === 13 ) {
       e.preventDefault();
       handleSearch();
@@ -73,7 +73,7 @@ function MyNavBar() {
               className="me-2"
               aria-label="Search"
               ref = {productName}
-              onKeyDown = {avoidReload}
+              onKeyDown = {handleAvoidReload}
             />
             <Button className="navbar__button" onClick={handleSearch}>Buscar</Button>
           </Form>

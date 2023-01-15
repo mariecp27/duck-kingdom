@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleArrowLeft } from "@fortawesome/free-solid-svg-icons";
@@ -7,12 +7,28 @@ import "aos/dist/aos.css";
 import { formatterPeso } from "../../helpers/formatterPeso";
 import ItemCount from "../ItemCount/ItemCount";
 
-function ItemDetail( { image, name, source, description, price, height, material, stock } ) {
-    
+function ItemDetail( { id, image, name, source, description, price, height, material, stock } ) {
+
+    const [amount, setAmount] = useState(1);
     const navigate = useNavigate();
 
-    const handleBack = () => {
+    const handleGoBack = () => {
         navigate(-1);
+    }
+
+    const handleAddToShoppingCar = () => {
+        console.log({
+            id,
+            image,
+            name,
+            source,
+            description,
+            price,
+            height,
+            material,
+            stock,
+            amount
+        });
     }
 
     useEffect(() => {
@@ -37,8 +53,13 @@ function ItemDetail( { image, name, source, description, price, height, material
                     <p><strong>Material: </strong>{material}</p>
                     <p><strong>Patitos disponibles: </strong>{stock}</p>
                     <strong className="item-detail__text-container-price">{formatterPeso(price)}</strong>
-                    <ItemCount stock={stock}/>
-                    <button className="item-detail__text-container-back" onClick={handleBack}><FontAwesomeIcon icon = { faCircleArrowLeft } />Volver</button>
+                    <ItemCount
+                        stock={stock}
+                        amount={amount}
+                        setAmount={setAmount}
+                        handleAddToShoppingCar={handleAddToShoppingCar}
+                    />
+                    <button className="item-detail__text-container-back" onClick={handleGoBack}><FontAwesomeIcon icon = { faCircleArrowLeft } />Volver</button>
                 </div>
             </div>
         </article>    
