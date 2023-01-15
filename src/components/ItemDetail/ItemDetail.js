@@ -5,7 +5,7 @@ import { faCircleArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { formatterPeso } from "../../helpers/formatterPeso";
-import ItemCount from "./ItemCount";
+import ItemCount from "../ItemCount/ItemCount";
 
 function ItemDetail( { image, name, source, description, price, height, material, stock } ) {
     

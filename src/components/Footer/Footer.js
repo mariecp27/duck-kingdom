@@ -1,6 +1,6 @@
-import SocialMedia from "./SocialMedia";
-import PaymentMethods from "./PaymentMethods";
-import Rights from "./Rights";
+import SocialMedia from "../SocialMedia/SocialMedia";
+import PaymentMethods from "../PaymentMethods/PaymentMethods";
+import Rights from "../Rights/Rights";
 
 function Footer() {
     return (
