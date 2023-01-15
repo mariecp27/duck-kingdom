@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 function ItemCount( { stock, amount, setAmount, handleAddToShoppingCar } ) {
 
     const handleSubtract = () => {

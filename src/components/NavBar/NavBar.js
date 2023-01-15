@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import { useRef } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
@@ -10,19 +10,17 @@ import CartWidget from "../CartWidget/CartWidget";
 
 function MyNavBar() {
 
-  const productName = useRef();
   const navigate = useNavigate();
   const activeClassName = "activeLink";
-  
-  const handleSearch = () => {
-    navigate(`/search/${productName.current.value}`);
+  const [searchInput, setSearchInput] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    navigate(`/search/${searchInput}`);
   }
 
-  const handleAvoidReload = (e) => {
-    if (e.keyCode === 13 ) {
-      e.preventDefault();
-      handleSearch();
-    }  
+  const handleSearchInput = (e) => {
+    setSearchInput(e.target.value);
   }
   
   return (
@@ -66,16 +64,16 @@ function MyNavBar() {
             </NavLink>
             <CartWidget />
           </Nav>
-          <Form className="d-flex navbar__form">
+          <Form className="d-flex navbar__form" onSubmit={handleSubmit}>
             <Form.Control
               type="search"
               placeholder="¿Qué patito buscas?"
               className="me-2"
               aria-label="Search"
-              ref = {productName}
-              onKeyDown = {handleAvoidReload}
+              value={searchInput}
+              onChange={handleSearchInput}
             />
-            <Button className="navbar__button" onClick={handleSearch}>Buscar</Button>
+            <Button className="navbar__button" type="submit">Buscar</Button>
           </Form>
         </Navbar.Collapse>
       </Container>
