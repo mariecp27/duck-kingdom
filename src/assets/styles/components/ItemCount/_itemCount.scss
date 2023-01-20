@@ -35,7 +35,8 @@
         }
     }
 
-    .item-count_add-to-car {
+    .item-count_add-to-car,
+    .item-count-finish {
         border: 1px solid $myOrange;
         border-radius: 20px;
         background: $myOrange;
@@ -48,5 +49,16 @@
         &:hover {
             background: $myYellow;
         }
+
+        &:disabled {
+            cursor: not-allowed;
+            background: $myYellow;
+        }
+    }
+
+    .item-count-finish {
+        display: inline-block;
+        white-space: nowrap;
+        text-decoration: none;
     }
 }
