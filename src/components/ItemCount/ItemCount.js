@@ -5,7 +5,7 @@ import { faBasketShopping } from "@fortawesome/free-solid-svg-icons";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-function ItemCount( { id, stock, amount, setAmount, handleAddToShoppingCar, productInCart} ) {
+function ItemCount( { id, stock, amount, setAmount, handleAddToCart, productInCart} ) {
 
     const handleSubtract = () => {
         amount > 1 && setAmount(amount - 1);
@@ -28,11 +28,8 @@ function ItemCount( { id, stock, amount, setAmount, handleAddToShoppingCar, prod
             </div>
             {
                 !productInCart(id)
-                    ? <button className="item-count_add-to-car" onClick={handleAddToShoppingCar}>Agregar al carrito</button>
-                    : <button
-                        className="item-count_add-to-car"
-                        onClick={handleAddToShoppingCar}
-                        disabled={true}>Patito en el carrito</button>
+                    ? <button className="item-count_add-to-car" onClick={handleAddToCart}>Agregar al carrito</button>
+                    : <button className="item-count_add-to-car" onClick={handleAddToCart} disabled={true}>Patito en el carrito</button>
             }
             {
                 productInCart(id) &&

@@ -1,16 +1,16 @@
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { formatterPeso } from "../../helpers/formatterPeso";
-import { CartContext } from "../../context/CartContext";
+import { useCartContext } from "../../context/CartContext";
 import ItemCount from "../ItemCount/ItemCount";
 
 function ItemDetail( { id, image, name, source, description, price, height, material, stock } ) {
 
-    const { addToShoppingCar, productInCart } = useContext(CartContext);
+    const { addToCart, productInCart } = useCartContext();
 
     const [amount, setAmount] = useState(1);
     const navigate = useNavigate();
@@ -19,7 +19,7 @@ function ItemDetail( { id, image, name, source, description, price, height, mate
         navigate(-1);
     }
 
-    const handleAddToShoppingCar = () => {
+    const handleAddToCart = () => {
         const product = {
             id,
             image,
@@ -33,7 +33,7 @@ function ItemDetail( { id, image, name, source, description, price, height, mate
             amount
         }
 
-        addToShoppingCar(product);
+        addToCart(product);
     }
 
     useEffect(() => {
@@ -64,7 +64,7 @@ function ItemDetail( { id, image, name, source, description, price, height, mate
                             stock={stock}
                             amount={amount}
                             setAmount={setAmount}
-                            handleAddToShoppingCar={handleAddToShoppingCar}
+                            handleAddToCart={handleAddToCart}
                             productInCart={productInCart}
                         />
                     }
