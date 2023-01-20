@@ -1,23 +1,49 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
 import { formatterPeso } from "../../helpers/formatterPeso";
-import { Button } from "react-bootstrap";
 
-function CartItem( { id, image, name, amount, price, removeFromCart } ) {
+function CartItem( { id, image, name, amount, price, stock, removeFromCart, updateAmountInCart } ) {
+
+    const [amountInCart, setAmountInCart] = useState(amount);
+
+    const handleSubtract = () => {
+        amountInCart > 1 && setAmountInCart(amountInCart - 1);
+    }
+
+    const handleAdd = () => {
+        amountInCart < stock && setAmountInCart(amountInCart + 1);
+    }
+
+    
+    useEffect(()=> {
+        updateAmountInCart(id, amountInCart);
+    }, [amountInCart]);
+    
+
     return (
-        <div>
-            <Link to={`/item/${id}`}>
+        <div className="cart-item">
+            <Link className="cart-item_img" to={`/item/${id}`}>
                 <img src={process.env.PUBLIC_URL + image} alt={name}/>
             </Link>
-            <Link to={`/item/${id}`}>
-                <h4>{name}</h4>
-            </Link>
-            <p>{amount}</p>
-            <strong>{formatterPeso(price * amount)}</strong>
-            <Button onClick={() => removeFromCart(id)}>
-                <FontAwesomeIcon icon = { faTrashCan } />
-            </Button>
+            <div className="cart-item_title">
+                <Link className="cart-item_title-name" to={`/item/${id}`}>
+                    {name}
+                </Link>
+                <p>Patitos disponibles: {stock}</p>
+            </div>
+            <div className="cart-item_text">
+                <div>
+                    <button className="cart-item_subtract" onClick={handleSubtract}>-</button>
+                    <strong>{amountInCart}</strong>
+                    <button className="cart-item_add" onClick={handleAdd}>+</button>
+                </div>
+                <strong className="cart-item_price">{formatterPeso(price * amount)}</strong>
+                <button className="cart-item-trash" onClick={() => removeFromCart(id)}>
+                    <FontAwesomeIcon icon = { faTrashCan } />
+                </button>
+            </div>
         </div>
     );
 }

@@ -1,0 +1,177 @@
+.cart-item {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10px auto;
+    font-family: $myText;
+    color: $myDarkBlue;
+    border: 1px $myOrange solid;
+    padding: 15px;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid #ffb8037f;
+
+    .cart-item_img {
+        width: 70%;
+        margin-bottom: 10px;
+        @include myTransition;
+
+        img {
+            width: 100%;
+        }
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    .cart-item_title-name {
+        font-family: $myTitle;
+        font-weight: bold;
+        color: $myOrange;
+        text-decoration: none;
+
+        &:hover {
+            color: $myYellow;
+        }
+    }
+
+    .cart-item_text {
+        div {
+            display: flex;
+            justify-content: center;
+            justify-content: center;
+            color: $myDarkBlue;
+            margin: 10px 0;
+
+            button {
+                background: $myOrange;
+                padding: 5px 20px;
+                color: $myDarkBlue;
+                font-weight: bold;
+                border: 1px solid $myOrange;
+                
+                &.cart-item_subtract{
+                    border-top-left-radius: 20px;
+                    border-bottom-left-radius: 20px;
+                }
+    
+                &.cart-item_add{
+                    border-top-right-radius: 20px;
+                    border-bottom-right-radius: 20px;
+                }
+        
+                &:hover {
+                    background: $myYellow;
+                }
+            }
+    
+            strong {
+                padding: 5px 20px;
+                border: 1px solid $myOrange;
+                background: transparent;
+            }
+        }
+
+        .cart-item_price {
+            font-size: 2rem;
+        }
+
+        .cart-item-trash {
+            display: block;
+            margin: 0 auto;
+            background: none;
+            border: none;
+            color: $myOrange;
+            font-weight: bold;
+            font-size: 2rem;
+
+            &:hover {
+                color: $myYellow;
+            }
+        }
+    }
+}
+
+/*===== ESTILOS MOBILE (OTHERS) - SM =====*/
+@media only screen and (min-width: 576px) {
+    .cart-item {
+        width: 80%;
+        flex-direction: row;
+        justify-content: space-between;
+    
+        .cart-item_img {
+            width: 25%;
+            margin: 0;
+        }
+
+        .cart-item_title {
+            width: 25%;
+        }
+
+        .cart-item_text {    
+            .cart-item_price {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+/*===== ESTILOS TABLET - MD =====*/
+@media only screen and (min-width: 768px) {
+    .cart-item {
+    
+        .cart-item_img {
+            width: 20%;
+        }
+
+        .cart-item_title {
+            width: 25%;
+        }
+
+        .cart-item_text {
+            width: 55%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            text-align: center;
+
+            div {
+                margin: 10px;
+            }
+    
+            .cart-item_price {
+                font-size: 2rem;
+            }
+    
+            .cart-item-trash {
+                width: 10%;
+                margin: 0;
+            }
+        }
+    }
+}
+
+/*===== ESTILOS LG =====*/
+@media only screen and (min-width: 992px) {
+    .cart-item {
+        width: 60%;
+        margin: 30px auto;
+    }
+}
+
+/*===== ESTILOS XL =====*/
+@media only screen and (min-width: 1200px) {
+    .cart-item {
+        width: 50%;
+    }
+}

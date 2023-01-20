@@ -53,6 +53,9 @@
 
     /* Form */
     .navbar__form {
+        width: 80%;
+        margin: 10px auto;
+
         input {
             font-family: $myTitle;
             font-size: 1.3rem;
@@ -113,6 +116,12 @@
         .navbar__links {
             width: 100%;
             justify-content: flex-end !important;
+        }
+
+        /* Form */
+        .navbar__form {
+            width: auto;
+            margin: 5px;
         }
     }
 }

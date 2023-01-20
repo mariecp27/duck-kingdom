@@ -21,11 +21,14 @@ function ItemCount( { id, stock, amount, setAmount, handleAddToCart, productInCa
 
     return (
         <div className="item-count">
-            <div>
-                <button className="item-count_subtract" onClick={handleSubtract}>-</button>
-                <strong>{amount}</strong>
-                <button className="item-count_add" onClick={handleAdd}>+</button>
-            </div>
+            {
+                !productInCart(id) &&
+                    <div>
+                        <button className="item-count_subtract" onClick={handleSubtract}>-</button>
+                        <strong>{amount}</strong>
+                        <button className="item-count_add" onClick={handleAdd}>+</button>
+                    </div>
+            }
             {
                 !productInCart(id)
                     ? <button className="item-count_add-to-car" onClick={handleAddToCart}>Agregar al carrito</button>

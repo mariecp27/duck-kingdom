@@ -1,0 +1,68 @@
+.cart {
+    width: 100%;
+    min-height: 70vh;
+    text-align: center;
+
+    .cart_title {
+        width: 70%;
+        opacity: 0.9;
+        margin: 20px 0;
+    }
+    
+    hr {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    h3 {
+        color: $myDarkBlue;
+        margin: 10px;
+        font-size: 2.5rem;
+        font-weight: bold;
+
+        span {
+            color: $myOrange;
+        }
+    }
+
+    .cart_button {
+        border: 1px solid $myOrange;
+        border-radius: 20px;
+        background: $myOrange;
+        padding: 5px 20px;
+        font-size: 1.5rem;
+        color: $myDarkBlue;
+        font-weight: bold;
+
+        &:hover {
+            background: $myYellow;
+        }
+    }
+}
+
+/*===== ESTILOS TABLET - MD =====*/
+@media only screen and (min-width: 768px) {
+    .cart {
+        .cart_title {
+            width: 50%;
+        }
+    }
+}
+
+/*===== ESTILOS LG =====*/
+@media only screen and (min-width: 992px) {
+    .cart {
+        .cart_title {
+            width: 40%;
+        }
+    }
+}
+
+/*===== ESTILOS XL =====*/
+@media only screen and (min-width: 1200px) {
+    .cart {
+        .cart_title {
+            width: 25%;
+        }
+    }
+}
