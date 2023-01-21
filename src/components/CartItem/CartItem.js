@@ -15,11 +15,10 @@ function CartItem( { id, image, name, amount, price, stock, removeFromCart, upda
     const handleAdd = () => {
         amountInCart < stock && setAmountInCart(amountInCart + 1);
     }
-
     
     useEffect(()=> {
         updateAmountInCart(id, amountInCart);
-    }, [amountInCart]);
+    }, [id, amountInCart]);
     
 
     return (

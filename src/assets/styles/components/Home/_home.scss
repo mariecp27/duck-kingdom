@@ -59,17 +59,24 @@
 
     .home_images {
         position: relative;
-        animation: change 5s infinite alternate linear;
+        animation: translate 5s infinite alternate linear;
         display: flex;
         justify-content: center;
 
-        img {
+        img,
+        div {
             width: 80%;
+        }
+
+        div {
+            height: 100%;
         }
         
         .home_images-main {
             position: absolute;
             z-index: 1;
+            background-size: 100% 100%;
+            animation: change 10s infinite alternate linear;
         }
 
         .home_images-back {
@@ -83,7 +90,8 @@
 @media only screen and (min-width: 576px) {
     .home {
         .home_images {
-            img {
+            img,
+            div {
                 width: 50%;
             }
         }
@@ -106,7 +114,8 @@
             width: 50%;
             margin: 40px;
 
-            img {
+            img,
+            div {
                 width: 100%;
             }
         }
@@ -142,10 +151,25 @@
 }
 
 /* Animación imagen banner*/
-@keyframes change {
+@keyframes translate {
     0% { transform: translateY(-20px); }
 }
 
 @keyframes rotate {
     0% { transform: rotate(360deg); }
+}
+
+@keyframes change {
+    0%, 20% {
+        background-image: url('../../../images/banner1.png');
+    }
+    25%, 45% {
+        background-image: url('../../../images/banner2.png');
+    }
+    50%, 70% {
+        background-image: url('../../../images/banner3.png');
+    }
+    75%, 100% {
+        background-image: url('../../../images/banner4.png');
+    }
 }

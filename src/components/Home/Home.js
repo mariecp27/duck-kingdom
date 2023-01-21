@@ -21,7 +21,7 @@ function Home() {
                 <Link to = {"/products"}>Ver todos los patitos</Link>
             </div>
             <div className="home_images">
-                <img src={process.env.PUBLIC_URL + "/assets/images/banner.png"} alt="Solid Snake" className="home_images-main"/>
+                <div className="home_images-main"></div>
                 <img src={process.env.PUBLIC_URL + "/assets/images/bannerB.png"} alt="Background"  className="home_images-back"/>
             </div>
         </div>
