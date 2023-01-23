@@ -22,7 +22,7 @@ function CartWidget() {
             {
                 productsAmountInCart() > 0 && 
                     <Link
-                        to={"/duck-kingdom/cart"}
+                        to={"/cart"}
                         className="navbar__car navbar__other-link"
                         data-aos="fade"
                     >

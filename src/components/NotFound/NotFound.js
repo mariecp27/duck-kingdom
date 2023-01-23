@@ -10,7 +10,7 @@ function NotFound() {
     const navigate = useNavigate();
 
     const handleGoHome = () => {
-        navigate("/duck-kingdom");
+        navigate("/");
     }
 
     useEffect(() => {

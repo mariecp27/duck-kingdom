@@ -40,7 +40,7 @@ function ItemCount( { id, stock, amount, setAmount, handleAddToCart, productInCa
             {
                 productInCart(id) &&
                     <Link
-                        to="/duck-kingdom/cart"
+                        to="/cart"
                         className="item-count-finish"
                         data-aos="fade"
                     >

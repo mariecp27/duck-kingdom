@@ -47,7 +47,7 @@ function Item( { id, image, name, source, price } ) {
             <h3>{name}</h3>
             <h4>{source}</h4>
             <strong>{formatterPeso(price)}</strong>
-            <Link to={`/duck-kingdom/item/${id}`} className="item_link">Detalle</Link>
+            <Link to={`/item/${id}`} className="item_link">Detalle</Link>
         </article>    
     )
 }

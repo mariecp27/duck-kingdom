@@ -23,11 +23,11 @@ function CartItem( { id, image, name, amount, price, stock, removeFromCart, upda
 
     return (
         <div className="cart-item">
-            <Link className="cart-item_img" to={`/duck-kingdom/item/${id}`}>
+            <Link className="cart-item_img" to={`/item/${id}`}>
                 <img src={process.env.PUBLIC_URL + image} alt={name}/>
             </Link>
             <div className="cart-item_title">
-                <Link className="cart-item_title-name" to={`/duck-kingdom/item/${id}`}>
+                <Link className="cart-item_title-name" to={`/item/${id}`}>
                     {name}
                 </Link>
                 <p>Patitos disponibles: {stock}</p>

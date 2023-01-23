@@ -21,7 +21,7 @@ function FavoriteItem( { id, image, name, price, productInFavorites, removeFromF
                 onClick={handleRemoveFromFavorites} 
             />
             <img src={process.env.PUBLIC_URL + image} alt={name} />
-            <Link to={`/duck-kingdom/item/${id}`} onClick={handleModal}>{name}</Link>
+            <Link to={`/item/${id}`} onClick={handleModal}>{name}</Link>
             <strong>{formatterPeso(price)}</strong>
         </div>
     )
