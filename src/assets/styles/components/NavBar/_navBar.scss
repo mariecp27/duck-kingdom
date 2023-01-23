@@ -59,8 +59,12 @@
         margin: 5px;
 
         svg {
-            color: $myPink;
+            font-size: 1.5rem;
             transition: color 0.15s ease-in-out;
+        }
+
+        svg.active {
+            color: $myPink;
         }
 
         &:hover {

@@ -1,0 +1,72 @@
+.favorite-item {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin: 10px auto;
+    font-family: $myText;
+    color: $myDarkBlue;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 1.3rem;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid #ffb8037f;
+    @include myTransition;
+
+    &:hover {
+        background-color: #ffb8037f;
+
+        & a {
+            color: $myPink;
+            transform: scale(1.1);
+        }
+    }
+
+    .favorite-item__favorite.active {
+        color: $myPink;
+        position: initial;
+        right: 15px;
+        font-size: 2rem;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    img {
+        width: 40%;
+    }
+
+    a {
+        font-size: 1.3rem;
+        font-family: $myTitle;
+        font-weight: bold;
+        color: $myOrange;
+        text-decoration: none;
+        margin: 5px;
+    }
+
+    strong {
+        margin: 5px;
+    }
+}
+
+/*===== ESTILOS MOBILE (OTHERS) - SM =====*/
+@media only screen and (min-width: 768px) {
+    .favorite-item {
+        font-size: 1.5rem;
+
+        .favorite-item__favorite.active {
+            font-size: 2.5rem;
+        }
+
+        a {
+            font-size: 1.5rem;
+        }
+    }
+}

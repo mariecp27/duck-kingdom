@@ -12,6 +12,7 @@ function ItemDetailContainer() {
     const { itemId } = useParams();
 
     useEffect( () => {
+        setProduct(null);
         requestProductById(Number(itemId))
             .then( (res) => {
                 setProduct(res);

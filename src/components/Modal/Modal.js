@@ -5,7 +5,7 @@ import FavoriteItem from "../FavoriteItem/FavoriteItem";
 
 function Modal( { modalStatus, setModalStatus } ) {
 
-    const { favorites, removeFromFavorites } = useFavoritesContext();
+    const { favorites, productInFavorites, removeFromFavorites } = useFavoritesContext();
 
     const handleModal = () => {
         setModalStatus(!modalStatus);
@@ -22,7 +22,10 @@ function Modal( { modalStatus, setModalStatus } ) {
                         <FavoriteItem
                             key={product.id}
                             {...product}
+                            productInFavorites={productInFavorites}
                             removeFromFavorites={removeFromFavorites}
+                            modalStatus={modalStatus}
+                            setModalStatus={setModalStatus}
                         />
                     ))
                 }

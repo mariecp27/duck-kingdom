@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { useFavoritesContext } from "../../context/FavoritesContext";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
@@ -12,6 +13,8 @@ import CartWidget from "../CartWidget/CartWidget";
 import Modal from "../Modal/Modal";
 
 function MyNavBar() {
+
+  const { favorites } = useFavoritesContext();
 
   const navigate = useNavigate();
   const activeClassName = "activeLink";
@@ -72,7 +75,10 @@ function MyNavBar() {
                 >Patitos de películas
               </NavLink>
               <Button className="navbar__favorites" onClick={handleModal}>
-                <FontAwesomeIcon icon={ faHeart } /> Favoritos
+                <FontAwesomeIcon
+                  icon={ faHeart }
+                  className={favorites.length > 0 ? 'active' : ''}
+                /> Favoritos
               </Button>
               <CartWidget />
             </Nav>

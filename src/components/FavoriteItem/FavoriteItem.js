@@ -1,18 +1,27 @@
+import { Link } from "react-router-dom";
 import { formatterPeso } from "../../helpers/formatterPeso";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
-function FavoriteItem( { id, image, name, price, removeFromFavorites } ) {
+function FavoriteItem( { id, image, name, price, productInFavorites, removeFromFavorites, modalStatus, setModalStatus } ) {
 
     const handleRemoveFromFavorites = () => {
         removeFromFavorites(id);
     }
 
+    const handleModal = () => {
+        setModalStatus(!modalStatus);
+    }
+
     return (
-        <div>
-            <FontAwesomeIcon icon = { faHeart } onClick={handleRemoveFromFavorites} />
+        <div className="favorite-item">
+            <FontAwesomeIcon
+                icon={faHeart}
+                className={`favorite-item__favorite ${productInFavorites(id) && 'active'}`} 
+                onClick={handleRemoveFromFavorites} 
+            />
             <img src={process.env.PUBLIC_URL + image} alt={name} />
-            <strong>{name}</strong>
+            <Link to={`/item/${id}`} onClick={handleModal}>{name}</Link>
             <strong>{formatterPeso(price)}</strong>
         </div>
     )
