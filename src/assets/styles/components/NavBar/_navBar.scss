@@ -51,10 +51,31 @@
         font-weight: bold;
     }
 
+    .navbar__favorites {
+        background-color: $myDarkBlue;
+        font-family: $myTitle;
+        font-size: 1.3rem;
+        border: #ffffff 1px solid;
+        margin: 5px;
+
+        svg {
+            color: $myPink;
+            transition: color 0.15s ease-in-out;
+        }
+
+        &:hover {
+            background-color: $myPink;
+    
+            svg {
+                color: #ffffffff;
+            }
+        }
+    }
+    
     /* Form */
     .navbar__form {
         width: 80%;
-        margin: 10px auto;
+        margin: 5px auto;
 
         input {
             font-family: $myTitle;

@@ -9,15 +9,16 @@ function Cart() {
     const { cart, removeFromCart, emptyCart, totalCart, updateAmountInCart } = useCartContext();
 
     useEffect(() => {
-        AOS.init();
+        AOS.init({
+            duration: 1500,
+            once: true
+        });
     }, []);
 
     return (
         <div
             className="cart"            
             data-aos="fade-up"
-            data-aos-duration="1500"
-            data-aos-once="true"
         >
             <img src={process.env.PUBLIC_URL + "/assets/images/cart.png"} className="cart_title" alt="Título" />
             <hr />

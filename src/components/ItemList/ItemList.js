@@ -6,15 +6,17 @@ import Item from "../Item/Item";
 function ItemList( { products } ) {
 
     useEffect(() => {
-        AOS.init();
+        AOS.init({
+            duration: 1500,
+            once: true
+        });
     }, []);
 
     return (
         <div
             className="item-list"
             data-aos="fade-up"
-            data-aos-duration="1500"
-            data-aos-once="true">
+        >
             <img src={process.env.PUBLIC_URL + "/assets/images/title.png"} alt="Título" className="item-list_title" />
             <hr />
             <div className="container-fluid">

@@ -11,7 +11,10 @@ function CartWidget() {
     const { productsAmountInCart } = useCartContext();
 
     useEffect(() => {
-        AOS.init();
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
     }, []);
 
     return (
@@ -22,8 +25,6 @@ function CartWidget() {
                         to={"/cart"}
                         className="navbar__car navbar__other-link"
                         data-aos="fade"
-                        data-aos-duration="1000"
-                        data-aos-once="true"
                     >
                         <FontAwesomeIcon icon = { faBasketShopping } />
                         <span> {productsAmountInCart()}</span>     

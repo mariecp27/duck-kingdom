@@ -14,15 +14,17 @@ function NoProducts() {
     }
 
     useEffect(() => {
-        AOS.init();
+        AOS.init({
+            duration: 1500,
+            once: true
+        });
     }, []);
 
     return (
         <div
             className="not-products"
             data-aos="fade-up"
-            data-aos-duration="1500"
-            data-aos-once="true">
+        >
             <img src={process.env.PUBLIC_URL + "/assets/images/ups.png"} alt="No products"/>
             <h3>¡Oh!, de momento, no hay patitos con el nombre o categoría ingresados</h3>
             <button className="item-detail__text-container-back" onClick={handleGoHome}><FontAwesomeIcon icon = { faCircleArrowLeft } />Ir al inicio</button>

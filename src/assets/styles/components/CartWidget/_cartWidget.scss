@@ -1,4 +1,4 @@
-a.navbar__car.navbar__other-link{
+a.navbar__car.navbar__other-link {
     text-align: center;
     color: #ffffff;
     font-size: 1.3rem;
@@ -6,8 +6,8 @@ a.navbar__car.navbar__other-link{
     border: #ffffff 1px solid;
     padding: 5px;
     background-color: $myDarkBlue;
-    opacity: 1;
-    margin: 0 5px;
+    margin: 5px;
+    display: inline-block;
     @include myTransition;
 
     &:hover {

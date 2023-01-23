@@ -6,6 +6,7 @@
     border: 1px $myOrange solid;
     padding: 15px;
     border-radius: 20px;
+    position: relative;
     @include myTransition;
 
     /* From https://css.glass */
@@ -21,6 +22,20 @@
         & img {
             transform: scale(1.1);
         }
+    }
+
+    .item__favorite {
+        position: absolute;
+        right: 15px;
+        font-size: 2.5rem;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .item__favorite.active {
+        color: $myPink;
     }
 
     img {

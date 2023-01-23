@@ -16,7 +16,10 @@ function ItemCount( { id, stock, amount, setAmount, handleAddToCart, productInCa
     }
 
     useEffect(() => {
-        AOS.init();
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
     }, []);
 
     return (
@@ -40,8 +43,7 @@ function ItemCount( { id, stock, amount, setAmount, handleAddToCart, productInCa
                         to="/cart"
                         className="item-count-finish"
                         data-aos="fade"
-                        data-aos-duration="1000"
-                        data-aos-once="true">
+                    >
                             Terminar compra <FontAwesomeIcon icon = { faBasketShopping } />
                     </Link>
             }

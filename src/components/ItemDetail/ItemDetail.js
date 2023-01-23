@@ -37,15 +37,17 @@ function ItemDetail( { id, image, name, source, description, price, height, mate
     }
 
     useEffect(() => {
-        AOS.init();
+        AOS.init({
+            duration: 1500,
+            once: true
+        });
     }, []);
 
     return (
         <article
             className="item-detail"
             data-aos="fade-up"
-            data-aos-duration="1500"
-            data-aos-once="true">
+        >
             <img src={process.env.PUBLIC_URL + image} alt={name}/>
             <div className="item-detail__text-container">
                 <div>

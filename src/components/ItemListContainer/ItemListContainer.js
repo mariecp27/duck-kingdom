@@ -19,19 +19,19 @@ function ItemListContainer() {
                 if (itemName) {
                     let name = itemName.toLowerCase();
                     setProducts(res.filter( product => product.name.toLowerCase().includes(name)));
-                    setLoading(false);
                 } else if (categoryId) {
                     setProducts(res.filter( product => product.category === categoryId ));
-                    setLoading(false);
                 } else {
                     setProducts(res);
-                    setLoading(false);
                 }
             })
             .catch( (err) => {
                 console.log(err);
+            })
+            .finally( () => {
+                setLoading(false);
             });
-    }, [ itemName, categoryId]);
+    }, [itemName, categoryId]);
 
     return (
         <div>

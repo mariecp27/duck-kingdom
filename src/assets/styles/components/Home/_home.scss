@@ -49,9 +49,9 @@
             margin: 20px auto;
             color: $myDarkBlue;
             text-decoration: none;
+            @include myTransition;
     
             &:hover {
-                font-weight: bold;
                 background: $myYellow;
             }
         }

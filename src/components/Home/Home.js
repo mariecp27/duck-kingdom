@@ -6,15 +6,17 @@ import "aos/dist/aos.css";
 function Home() {
 
     useEffect(() => {
-        AOS.init();
+        AOS.init({
+            duration: 1500,
+            once: true
+        });
     }, []);
 
     return (
         <div
             className="home"
             data-aos="fade-up"
-            data-aos-duration="1500"
-            data-aos-once="true">
+        >
             <div className="home_content">
                 <h1>¡Del estanque a tu estante!</h1>
                 <h2>Tus personajes favoritos en la mejor forma</h2>
