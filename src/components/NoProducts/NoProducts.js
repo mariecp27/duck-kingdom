@@ -10,7 +10,7 @@ function NoProducts() {
     const navigate = useNavigate();
 
     const handleGoHome = () => {
-        navigate("/");
+        navigate("/duck-kingdom");
     }
 
     useEffect(() => {

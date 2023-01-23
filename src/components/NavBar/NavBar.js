@@ -23,7 +23,7 @@ function MyNavBar() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate(`/search/${searchInput}`);
+    navigate(`/duck-kingdom/search/${searchInput}`);
   }
 
   const handleSearchInput = (e) => {
@@ -38,7 +38,7 @@ function MyNavBar() {
     <div>
       <Navbar expand="lg" className="main__navbar">
         <Container fluid>
-          <Link to={"/"}>
+          <Link to={"/duck-kingdom"}>
             <img src={process.env.PUBLIC_URL + "/assets/images/full-logo.png"} alt = "Logo" className = "navbar__logo" />
           </Link>
           <Navbar.Toggle aria-controls="navbarScroll" />
@@ -47,28 +47,28 @@ function MyNavBar() {
               className="me-auto my-2 my-lg-0 d-flex align-items-center flex-md-row justify-content-md-around navbar__links"
             >
               <NavLink
-                to={"/products"}
+                to={"/duck-kingdom/products"}
                 className={({ isActive }) =>
                   isActive ? activeClassName : undefined
                 }
                 >Todos los patitos
               </NavLink>
               <NavLink
-                to={"/category/comics"}
+                to={"/duck-kingdom/category/comics"}
                 className={({ isActive }) =>
                   isActive ? activeClassName : undefined
                 }
                 >Patitos de comics
               </NavLink>
               <NavLink
-                to={"/category/games"}
+                to={"/duck-kingdom/category/games"}
                 className={({ isActive }) =>
                   isActive ? activeClassName : undefined
                 }
                 >Patitos de juegos
               </NavLink>
               <NavLink
-                to={"/category/movies"}
+                to={"/duck-kingdom/category/movies"}
                 className={({ isActive }) =>
                   isActive ? activeClassName : undefined
                 }

@@ -21,13 +21,13 @@ function App() {
 
           <Routes>
             <Route path="/" exact element={<Home />} />
-            <Route path="/duck-kingdom" element={<Home />} />
-            <Route path="/products" element={<ItemListContainer />} />
-            <Route path="/search" element={<ItemListContainer />} />
-            <Route path="/search/:itemName" element={<ItemListContainer />} />
-            <Route path="/category/:categoryId" element={<ItemListContainer />} />
-            <Route path="/item/:itemId" element={<ItemDetailContainer />} />
-            <Route path="/cart" element={<Cart />} />
+            <Route path="/duck-kingdom" exact element={<Home />} />
+            <Route path="/duck-kingdom/products" element={<ItemListContainer />} />
+            <Route path="/duck-kingdom/search" element={<ItemListContainer />} />
+            <Route path="/duck-kingdom/search/:itemName" element={<ItemListContainer />} />
+            <Route path="/duck-kingdom/category/:categoryId" element={<ItemListContainer />} />
+            <Route path="/duck-kingdom/item/:itemId" element={<ItemDetailContainer />} />
+            <Route path="/duck-kingdom/cart" element={<Cart />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
 
