@@ -1,7 +1,7 @@
 # duck-kingdom
 
 ### 1. Demo
-El proyecto hasta la fecha está disponible en el siguiente [enlace](https://mariecp27.github.io/duck-kingdom/).
+El proyecto hasta la fecha está disponible en el siguiente [enlace](https://duck-kingdom.netlify.app/).
 
 ### 2. Ejecución del proyecto
 * Requerimientos: [Node.js](https://nodejs.org/es/)
