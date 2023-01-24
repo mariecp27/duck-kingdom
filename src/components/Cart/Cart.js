@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import { useCartContext } from "../../context/CartContext";
-import { formatterPeso } from "../../helpers/formatterPeso";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import CartItem from "../CartItem/CartItem";
+import CartContainer from "../CartContainer/CartContainer";
+import NoCart from "../NoCart/NoCart";
 
 function Cart() {
     const { cart, removeFromCart, emptyCart, totalCart, updateAmountInCart } = useCartContext();
@@ -20,21 +20,17 @@ function Cart() {
             className="cart"            
             data-aos="fade-up"
         >
-            <img src={process.env.PUBLIC_URL + "/assets/images/cart.png"} className="cart_title" alt="Título" />
-            <hr />
             {
-                cart.map(product => (
-                    <CartItem
-                        key={product.id}
-                        {...product}
+                cart.length > 0
+                ?   <CartContainer
+                        cart={cart}
                         removeFromCart={removeFromCart}
+                        emptyCart={emptyCart}
+                        totalCart={totalCart}
                         updateAmountInCart={updateAmountInCart}
                     />
-                ))
+                :   <NoCart />
             }
-            <hr />
-            <h3>Total compra: <span>{formatterPeso(totalCart())}</span></h3>
-            <button className="cart_button" onClick={emptyCart}>Vaciar carrito</button>
         </div>
     );
 }

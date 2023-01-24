@@ -1,7 +1,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmarkCircle } from "@fortawesome/free-solid-svg-icons";
 import { useFavoritesContext } from "../../context/FavoritesContext";
-import FavoriteItem from "../FavoriteItem/FavoriteItem";
+import FavoriteContainer from "../FavoriteContainer/FavoriteContainer";
+import NoFavorite from "../NoFavorite/NoFavorite";
 
 function Modal( { modalStatus, setModalStatus } ) {
 
@@ -15,19 +16,19 @@ function Modal( { modalStatus, setModalStatus } ) {
         <div className={`modal__overlay ${modalStatus && 'modal__active'}`}>
             <div className="modal__container">
                 <FontAwesomeIcon icon = { faXmarkCircle } onClick={handleModal} />
-                <img src={process.env.PUBLIC_URL + "/assets/images/favorites.png"} alt="Título" />
-                <hr />
-                {                
-                    favorites.map(product => (
-                        <FavoriteItem
-                            key={product.id}
-                            {...product}
-                            productInFavorites={productInFavorites}
-                            removeFromFavorites={removeFromFavorites}
-                            modalStatus={modalStatus}
-                            setModalStatus={setModalStatus}
-                        />
-                    ))
+                {
+                    favorites.length > 0
+                        ?   <FavoriteContainer
+                                favorites={favorites}
+                                productInFavorites={productInFavorites}
+                                removeFromFavorites={removeFromFavorites}
+                                modalStatus={modalStatus}
+                                setModalStatus={setModalStatus}
+                            />
+                        :   <NoFavorite
+                                modalStatus={modalStatus}
+                                setModalStatus={setModalStatus}
+                            />
                 }
             </div>
         </div>

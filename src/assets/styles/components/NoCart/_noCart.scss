@@ -1,0 +1,32 @@
+.no-cart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    text-align: center;
+
+    h2 {
+        font-family: $myText;
+        color: $myDarkBlue;
+        font-size: 2rem;
+        margin: 20px;
+    }
+
+    a {
+        border: 1px solid $myOrange;
+        border-radius: 20px;
+        background: $myOrange;
+        padding: 5px 20px;
+        font-size: 1.5rem;
+        margin: 20px auto;
+        color: $myDarkBlue;
+        text-decoration: none;
+        font-weight: bold;
+        @include myTransition;
+
+        &:hover {
+            background: $myYellow;
+        }
+    }
+}

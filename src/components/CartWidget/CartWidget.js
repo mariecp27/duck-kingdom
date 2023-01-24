@@ -19,17 +19,15 @@ function CartWidget() {
 
     return (
         <div>
-            {
-                productsAmountInCart() > 0 && 
-                    <Link
-                        to={"/cart"}
-                        className="navbar__car navbar__other-link"
-                        data-aos="fade"
-                    >
-                        <FontAwesomeIcon icon = { faBasketShopping } />
-                        <span> {productsAmountInCart()}</span>     
-                    </Link>
-            }
+            <Link
+                to={"/cart"}
+                className="navbar__car navbar__other-link"
+            >
+                <FontAwesomeIcon icon = { faBasketShopping } />
+                {
+                    productsAmountInCart() > 0 && <span data-aos="fade"> {productsAmountInCart()}</span>
+                }
+            </Link>
         </div>
     );
 }

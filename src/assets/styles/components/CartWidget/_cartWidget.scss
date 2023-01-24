@@ -8,6 +8,7 @@ a.navbar__car.navbar__other-link {
     background-color: $myDarkBlue;
     margin: 5px;
     display: inline-block;
+    opacity: 1;
     @include myTransition;
 
     &:hover {
@@ -20,6 +21,6 @@ a.navbar__car.navbar__other-link {
 /*===== ESTILOS LG =====*/
 @media only screen and (min-width: 992px) {
     a.navbar__car.navbar__other-link {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 }
