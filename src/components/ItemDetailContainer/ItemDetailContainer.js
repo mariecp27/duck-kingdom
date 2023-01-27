@@ -32,13 +32,13 @@ function ItemDetailContainer() {
                 setLoading(false);
             });
     }, [itemId]);
-
+    
     return (
         <div>      
             {
                 loading
                     ? <Spinner />
-                    : product
+                    : product.name
                         ? <ItemDetail {...product}/>
                         : <NotFound />
             }

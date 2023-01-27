@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "name": "Batman",
+        "name": "batman",
         "source": "DC Comics",
         "description": "Ponte tu capa y libera a tu héroe interior. Lleva al pato Batman al estanque para perseguir a los villanos locos de Gotham.",
         "price": 250000,
@@ -13,7 +13,7 @@
     },
     {
         "id": 2,
-        "name": "Solid Snake",
+        "name": "solid snake",
         "source": "Metal Gear",
         "description": "Aunque puede haber sido transformado en un pato, subestimar la destreza de Solid Snake en el campo de batalla es una forma segura de conducir a la muerte de su objetivo. Armado con un silenciador y su icónico equip, este es un coleccionable que definitivamente querrás en tu arsenal.",
         "price": 79000,
@@ -25,7 +25,7 @@
     },
     {
         "id": 3,
-        "name": "Superman",
+        "name": "superman",
         "source": "DC Comics",
         "description": "Más rápido que una bala, viene el protector del estanque para luchar contra los villanos del mundo de DC Comics, es Superman el pato héroe.",
         "price": 500000,
@@ -37,7 +37,7 @@
     },
     {
         "id": 4,
-        "name": "Ryo Hazuki",
+        "name": "ryo hazuki",
         "source": "Shenmue",
         "description": "El pato Ryo se mantiene en su postura 'lista para la acción', preparado para enfrentarse a cualquier desafío mientras busca vengar a su padre.",
         "price": 85000,
@@ -49,7 +49,7 @@
     },
     {
         "id": 5,
-        "name": "Egon Spengler",
+        "name": "egon spengler",
         "source": "Ghostbusters",
         "description": "Egon se une al equipo para aspirar todos los fantasmas del estanque.",
         "price": 110000,
@@ -61,7 +61,7 @@
     },
     {
         "id": 6,
-        "name": "Doc Brown",
+        "name": "doc brown",
         "source": "Back to the Future",
         "description": "El doctor Emmett Brown viene armado con la máquina del tiempo y su icónica expresión, listo para saltar a otra aventura.",
         "price": 85000,
@@ -73,7 +73,7 @@
     },
     {
         "id": 7,
-        "name": "Peacemaker",
+        "name": "peacemaker",
         "source": "DC Comics",
         "description": "Conocido como un extremista violento que se pone un casco cromado de forma extraña, Peacemaker es un hombre que cree en la paz a cualquier costo.",
         "price": 140000,
@@ -85,7 +85,7 @@
     },
     {
         "id": 8,
-        "name": "Moxxi",
+        "name": "moxxi",
         "source": "Borderlands",
         "description": "Mad Moxxi siempre ha sido un poco excéntrica, pero incluso nos sorprenderemos de verla en forma de pato de goma. ",
         "price": 120000,
@@ -97,7 +97,7 @@
     },
     {
         "id": 9,
-        "name": "Gandalf",
+        "name": "gandalf",
         "source": "Lord of the Rings",
         "description": "No pasarás, al estanque, con el protector de los patos, Gandalf, en su icónica postura.",
         "price": 505000,
@@ -109,7 +109,7 @@
     },
     {
         "id": 10,
-        "name": "Nemesis",
+        "name": "nemesis",
         "source": "Resident Evil",
         "description": "Si alguna vez te encuentras con este muerto viviente, te recomendamos que corras de él, ya que es despiadado y su poder es inigualable. Nemesis es el arma bio-orgánica definitiva de Umbrella Corp, incluso como pato.",
         "price": 85000,
@@ -121,7 +121,7 @@
     },
     {
         "id": 11,
-        "name": "Deanna Troi",
+        "name": "deanna troi",
         "source": "Star Trek",
         "description": "Ella podría ser medio pato betazoide, pero eso no significa que sus habilidades empáticas extra sensoriales sean menos eficaces.",
         "price": 85000,
@@ -133,7 +133,7 @@
     },
     {
         "id": 12,
-        "name": "Two-Face",
+        "name": "two-Face",
         "source": "DC Comics",
         "description": "Una mente maestra criminal obsesionada con la dualidad. Anteriormente un aliado cercano a Batman, Two-Face es una fuerza a tener en cuenta y se ha convertido en uno de los mayores enemigos del Caballero Oscuro.",
         "price": 85000,
@@ -145,7 +145,7 @@
     },
     {
         "id": 13,
-        "name": "Marty McFly",
+        "name": "marty mcFly",
         "source": "Back to the Future",
         "description": "Marty, vestido con su sombrero iridiscente de marca registrada y montando su increíble hoverboard, está preparado y listo para ir al futuro.",
         "price": 85000,
@@ -157,7 +157,7 @@
     },
     {
         "id": 14,
-        "name": "Chucky",
+        "name": "chucky",
         "source": "Chucky",
         "description": "¡Parece que el asesino en serie Chucky ha transferido accidentalmente su alma al cuerpo equivocado y terminó transformado en un pato!",
         "price": 90000,
@@ -169,7 +169,7 @@
     },
     {
         "id": 15,
-        "name": "Bob",
+        "name": "bob",
         "source": "Minions",
         "description": "Con su confiable oso de peluche, Tim, bajo su ala, el adorable Minion Bob está listo un chapuzón y traer travesuras al estanque como un pato agitador.",
         "price": 85000,
@@ -181,7 +181,7 @@
     },
     {
         "id": 16,
-        "name": "Frodo Baggins",
+        "name": "frodo baggins",
         "source": "Lord of the Rings",
         "description": "El pato Frodo lleva el Anillo Único con él en su viaje a través de los estanques.",
         "price": 200000,
@@ -193,7 +193,7 @@
     },
     {
         "id": 17,
-        "name": "Oscar",
+        "name": "oscar",
         "source": "Dark Souls",
         "description": "La icónica armadura occidental de Oscar, la espada recta de Astora y el escudo lo convierten en la encarnación viva de todas las cosas heroicas, incluso como un pato.",
         "price": 90000,
@@ -205,7 +205,7 @@
     },
     {
         "id": 18,
-        "name": "Gimli",
+        "name": "gimli",
         "source": "Lord of the Rings",
         "description": "Como enano, Gimli disfruta de la gran fuerza y resistencia típicas de su raza. Incluso como pato, sigue siendo la fuerza implacable que las fuerzas de Sauron conocen y temen.",
         "price": 85000,
@@ -217,7 +217,7 @@
     },
     {
         "id": 19,
-        "name": "Chris Redfield",
+        "name": "chris redfield",
         "source": "Resident Evil",
         "description": "Como uno de los personajes centrales de la franquicia Resident Evil, Chris Redfield y sus aventuras de destrución de armas biológicas le ha hecho convertirse en un objetivo clave para el Umbrella Corp. Parece que han tenido éxito mientras se ha transformado en un pato.",
         "price": 100000,
@@ -229,7 +229,7 @@
     },
     {
         "id": 20,
-        "name": "Aquaman",
+        "name": "aquaman",
         "source": "DC Comics",
         "description": "Aunque se ha transformado en un pato, Aquaman es un héroe que no quieres desafiar. Armado con su tridente, es conocido en todas las tierras como el rey de los océanos.",
         "price": 160000,
@@ -241,7 +241,7 @@
     },
     {
         "id": 21,
-        "name": "Kratos",
+        "name": "kratos",
         "source": "God of War",
         "description": "Después de derrotar a los grandes dioses olímpicos, Kratos nada a través de las orillas de Midgard, hacha en la mano para desafiar a las deidades nórdicas. Algunos podrían decir que está en su pico de rendimiento mientras está en su forma de pato de goma.",
         "price": 200000,
@@ -253,7 +253,7 @@
     },
     {
         "id": 22,
-        "name": "Joel",
+        "name": "joel",
         "source": "The Last of Us",
         "description": "Parece que el brote ha tenido efectos secundarios graves para Joel mientras está mutado en un pato. Aunque podemos cuestionar sus habilidades para sobrevivir a un mundo postapocalíptico en esta forma, seguro que se verá genial en tu estante.",
         "price": 150000,
@@ -265,7 +265,7 @@
     },
     {
         "id": 23,
-        "name": "Slimer",
+        "name": "slimer",
         "source": "Ghostbusters",
         "description": "Después de salir de su trampa, parece que Slimer ha decidido poseer un pato desafortunado en un esfuerzo por esconderse de los Cazafantasmas.",
         "price": 215000,
@@ -277,7 +277,7 @@
     },
     {
         "id": 24,
-        "name": "Alan Grant",
+        "name": "alan grant",
         "source": "Jurassic Park",
         "description": "El paleontólogo de renombre mundial, Dr. Alan Grant, está listo para ejecutar su plan de distraer al T. rex con un destello en la mano, a pesar de haber sido convertido en un pato.",
         "price": 125000,
@@ -289,7 +289,7 @@
     },
     {
         "id": 25,
-        "name": "Ada Wong Duck",
+        "name": "ada wong",
         "source": "Resident Evil",
         "description": "Anteriormente conocido como uno de los mejores agentes de la Umbrella Corp, Ada Wong se ha transformado en un pato.",
         "price": 85000,
