@@ -17,7 +17,7 @@ export const requestProductById = (id) => {
                 resolve(product);
             } else {
                 reject({
-                    error: '¡Oh!, no se encontró ese patito'
+                    error: "¡Oh!, no se encontró ese patito"
                 })
             }
         }, 2000);

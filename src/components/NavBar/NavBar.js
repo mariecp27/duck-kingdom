@@ -1,9 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeart } from "@fortawesome/free-solid-svg-icons";
-import { useFavoritesContext } from "../../context/FavoritesContext";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
@@ -11,15 +8,13 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import CartWidget from "../CartWidget/CartWidget";
 import Modal from "../Modal/Modal";
+import FavoriteWidget from "../FavoriteWidget/FavoriteWidget";
 
 function MyNavBar() {
 
-  const { favorites } = useFavoritesContext();
-
   const navigate = useNavigate();
   const activeClassName = "activeLink";
-  const [searchInput, setSearchInput] = useState('');
-	const [modalStatus, setModalStatus] = useState(false);
+  const [searchInput, setSearchInput] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -28,10 +23,6 @@ function MyNavBar() {
 
   const handleSearchInput = (e) => {
     setSearchInput(e.target.value);
-  }
-
-  const handleModal = () => {
-    setModalStatus(!modalStatus);
   }
   
   return (
@@ -74,12 +65,7 @@ function MyNavBar() {
                 }
                 >Patitos de películas
               </NavLink>
-              <Button className="navbar__favorites" onClick={handleModal}>
-                <FontAwesomeIcon
-                  icon={ faHeart }
-                  className={favorites.length > 0 ? 'active' : ''}
-                /> Favoritos
-              </Button>
+              <FavoriteWidget />
               <CartWidget />
             </Nav>
             <Form className="d-flex navbar__form" onSubmit={handleSubmit}>
@@ -96,10 +82,7 @@ function MyNavBar() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      <Modal
-        modalStatus={modalStatus}
-        setModalStatus={setModalStatus}
-      />
+      <Modal />
     </div>
   );
 }

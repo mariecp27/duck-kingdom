@@ -1,19 +1,19 @@
+import { useFavoritesContext } from "../../context/FavoritesContext";
 import FavoriteItem from "../FavoriteItem/FavoriteItem";
 
-function FavoriteContainer( { favorites, productInFavorites, removeFromFavorites, modalStatus, setModalStatus } ) {
+function FavoriteContainer() {
+
+    const { favorites } = useFavoritesContext();
+
     return (
         <div>
-            <img src={process.env.PUBLIC_URL + "/assets/images/favorites.png"} alt="Título" />
+            <img src={process.env.PUBLIC_URL + "/assets/images/favorites.png"} alt="Título"/>
                 <hr />
                 {                
                     favorites.map(product => (
                         <FavoriteItem
                             key={product.id}
                             {...product}
-                            productInFavorites={productInFavorites}
-                            removeFromFavorites={removeFromFavorites}
-                            modalStatus={modalStatus}
-                            setModalStatus={setModalStatus}
                         />
                     ))
                 }

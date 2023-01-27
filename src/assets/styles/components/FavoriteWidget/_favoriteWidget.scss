@@ -1,24 +1,24 @@
-a.navbar__car.navbar__other-link {
+.navbar__favorites {
     background-color: $myDarkBlue;
-    text-align: center;
-    color: #ffffff;
+    font-family: $myTitle;
     font-size: 1.3rem;
-    border-radius: 0.375rem;
     border: #ffffff 1px solid;
-    padding: 5px;
     margin: 5px;
-    display: inline-block;
-    opacity: 1;
-    @include myTransition;
+    padding: 5px;
+    border-radius: 0.375rem;
+    color: #ffffff;
+
+    svg {
+        font-size: 1.5rem;
+        transition: color 0.15s ease-in-out;
+    }
 
     svg.active {
         color: $myPink;
     }
 
     &:hover {
-        cursor: pointer;
         background-color: $myPink;
-        color: #ffffff;
 
         svg {
             color: #ffffffff;

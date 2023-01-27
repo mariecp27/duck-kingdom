@@ -71,7 +71,7 @@ function ItemDetail( { id, image, name, source, description, price, height, mate
                 <div>
                     <FontAwesomeIcon
                         icon={ faHeart }
-                        className={`item-detail__favorite ${productInFavorites(id) && 'active'}`} 
+                        className={`item-detail__favorite ${productInFavorites(id) ? "active" : ""}`} 
                         onClick={!productInFavorites(id) ? handleAddFavorite : handleRemoveFromFavorites}
                     />
                     <h3>{name}</h3>

@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBasketShopping } from "@fortawesome/free-solid-svg-icons";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useCartContext } from "../../context/CartContext";
@@ -23,7 +23,10 @@ function CartWidget() {
                 to={"/cart"}
                 className="navbar__car navbar__other-link"
             >
-                <FontAwesomeIcon icon = { faBasketShopping } />
+                <FontAwesomeIcon
+                    icon={faCartShopping}
+                    className={productsAmountInCart() > 0 ? "active" : ""}
+                />
                 {
                     productsAmountInCart() > 0 && <span data-aos="fade"> {productsAmountInCart()}</span>
                 }

@@ -1,10 +1,9 @@
 import { Link } from "react-router-dom";
+import { useModalContext } from "../../context/ModalContext";
 
-function NoFavorite( { modalStatus, setModalStatus } ) {
+function NoFavorite() {
 
-    const handleModal = () => {
-        setModalStatus(!modalStatus);
-    }
+    const { handleModal } = useModalContext();
 
     return (
         <div className="no-favorite">

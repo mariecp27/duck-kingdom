@@ -8,7 +8,7 @@ export const useFavoritesContext = () => {
 
 export const FavoritesProvider = ( { children } ) => {
 
-    const initialState = JSON.parse(localStorage.getItem('favorites')) || [];
+    const initialState = JSON.parse(localStorage.getItem("favorites")) || [];
     
     const [favorites, setFavorites] = useState(initialState);
 
@@ -25,7 +25,7 @@ export const FavoritesProvider = ( { children } ) => {
     }
 
     useEffect(() => {
-        localStorage.setItem('favorites', JSON.stringify(favorites));
+        localStorage.setItem("favorites", JSON.stringify(favorites));
     }, [favorites]);
 
     return(

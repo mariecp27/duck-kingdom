@@ -41,10 +41,10 @@ function Item( { id, image, name, source, price } ) {
         >
             <FontAwesomeIcon
                 icon={ faHeart }
-                className={`item__favorite ${productInFavorites(id) && 'active'}`} 
+                className={`item__favorite ${productInFavorites(id) ? "active" : ""}`} 
                 onClick={!productInFavorites(id) ? handleAddFavorite : handleRemoveFromFavorites} />
             <img src={process.env.PUBLIC_URL + image} alt={name}/>
-            <h3>{name}</h3>
+            <h3 style={{textTransform: "capitalize"}}>{name}</h3>
             <h4>{source}</h4>
             <strong>{formatterPeso(price)}</strong>
             <Link to={`/item/${id}`} className="item_link">Detalle</Link>

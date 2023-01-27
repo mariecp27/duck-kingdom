@@ -3,8 +3,11 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
 import { formatterPeso } from "../../helpers/formatterPeso";
+import { useCartContext } from "../../context/CartContext";
 
-function CartItem( { id, image, name, amount, price, stock, removeFromCart, updateAmountInCart } ) {
+function CartItem( { id, image, name, amount, price, stock } ) {
+
+    const { removeFromCart, updateAmountInCart } = useCartContext();
 
     const [amountInCart, setAmountInCart] = useState(amount);
 
@@ -27,7 +30,7 @@ function CartItem( { id, image, name, amount, price, stock, removeFromCart, upda
                 <img src={process.env.PUBLIC_URL + image} alt={name}/>
             </Link>
             <div className="cart-item_title">
-                <Link className="cart-item_title-name" to={`/item/${id}`}>
+                <Link className="cart-item_title-name productName" to={`/item/${id}`}>
                     {name}
                 </Link>
                 <p>Patitos disponibles: {stock}</p>
@@ -40,7 +43,7 @@ function CartItem( { id, image, name, amount, price, stock, removeFromCart, upda
                 </div>
                 <strong className="cart-item_price">{formatterPeso(price * amount)}</strong>
                 <button className="cart-item-trash" onClick={() => removeFromCart(id)}>
-                    <FontAwesomeIcon icon = { faTrashCan } />
+                    <FontAwesomeIcon icon={faTrashCan}/>
                 </button>
             </div>
         </div>

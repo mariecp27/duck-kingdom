@@ -8,7 +8,7 @@ export const useCartContext = () => {
 
 export const CartProvider = ( { children } ) => {
 
-    const initialState = JSON.parse(localStorage.getItem('cart')) || [];
+    const initialState = JSON.parse(localStorage.getItem("cart")) || [];
     
     const [cart, setCart] = useState(initialState);
     
@@ -48,7 +48,7 @@ export const CartProvider = ( { children } ) => {
     }
     
     useEffect(() => {
-        localStorage.setItem('cart', JSON.stringify(cart));
+        localStorage.setItem("cart", JSON.stringify(cart));
     }, [cart]);
 
     return(
