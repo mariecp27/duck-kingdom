@@ -27,7 +27,12 @@ function NoProducts() {
         >
             <img src={process.env.PUBLIC_URL + "/assets/images/ups.png"} alt="No products"/>
             <h3>¡Oh!, de momento, no hay patitos con el nombre o categoría ingresados</h3>
-            <button className="item-detail__text-container-back" onClick={handleGoHome}><FontAwesomeIcon icon = { faCircleArrowLeft } />Ir al inicio</button>
+            <button
+                className="item-detail__text-container-back"
+                onClick={handleGoHome}
+            >
+                <FontAwesomeIcon icon={faCircleArrowLeft}/>Ir al inicio
+            </button>
         </div>
     )
 }

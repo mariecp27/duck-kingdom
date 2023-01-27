@@ -74,7 +74,7 @@ function ItemDetail( { id, image, name, source, description, price, height, mate
                         className={`item-detail__favorite ${productInFavorites(id) ? "active" : ""}`} 
                         onClick={!productInFavorites(id) ? handleAddFavorite : handleRemoveFromFavorites}
                     />
-                    <h3>{name}</h3>
+                    <h3 className="productName">{name}</h3>
                     <em>{source}</em>
                 </div>
                 <div>
@@ -94,7 +94,7 @@ function ItemDetail( { id, image, name, source, description, price, height, mate
                         />
                     }
                     <button className="item-detail__text-container-back" onClick={handleGoBack}>
-                        <FontAwesomeIcon icon = { faCircleArrowLeft } />Volver
+                        <FontAwesomeIcon icon={faCircleArrowLeft}/>Volver
                     </button>
                 </div>
             </div>

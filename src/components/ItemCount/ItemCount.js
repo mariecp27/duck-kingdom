@@ -1,11 +1,11 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBasketShopping } from "@fortawesome/free-solid-svg-icons";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-function ItemCount( { id, stock, amount, setAmount, handleAddToCart, productInCart} ) {
+function ItemCount( { id, stock, amount, setAmount, handleAddToCart, productInCart } ) {
 
     const handleSubtract = () => {
         amount > 1 && setAmount(amount - 1);
@@ -44,7 +44,7 @@ function ItemCount( { id, stock, amount, setAmount, handleAddToCart, productInCa
                         className="item-count-finish"
                         data-aos="fade"
                     >
-                            Terminar compra <FontAwesomeIcon icon = { faBasketShopping } />
+                        Terminar compra <FontAwesomeIcon icon={faCartShopping}/>
                     </Link>
             }
             

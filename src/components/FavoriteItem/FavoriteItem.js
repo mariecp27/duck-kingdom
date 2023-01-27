@@ -10,16 +10,12 @@ function FavoriteItem( { id, image, name, price } ) {
     const { handleModal } = useModalContext();
     const { productInFavorites, removeFromFavorites } = useFavoritesContext();
 
-    const handleRemoveFromFavorites = () => {
-        removeFromFavorites(id);
-    }
-
     return (
         <div className="favorite-item">
             <FontAwesomeIcon
                 icon={faHeart}
                 className={`favorite-item__favorite ${productInFavorites(id) ? "active" : ""}`} 
-                onClick={handleRemoveFromFavorites} 
+                onClick={() => removeFromFavorites(id)} 
             />
             <img src={process.env.PUBLIC_URL + image} alt={name} />
             <Link to={`/item/${id}`} onClick={handleModal} className="productName">{name}</Link>

@@ -12,30 +12,6 @@ function ItemListContainer() {
     const [loading, setLoading] = useState(true);
     const { itemName, categoryId } = useParams();
 
-    /*
-    useEffect( () => {
-        setProducts([]);
-        setLoading(true);
-        requestAllProducts()
-            .then( (res) => {
-                if (itemName) {
-                    let name = itemName.toLowerCase();
-                    setProducts(res.filter( product => product.name.toLowerCase().includes(name)));
-                } else if (categoryId) {
-                    setProducts(res.filter( product => product.category === categoryId ));
-                } else {
-                    setProducts(res);
-                }
-            })
-            .catch( (err) => {
-                console.log(err);
-            })
-            .finally( () => {
-                setLoading(false);
-            });
-    }, [itemName, categoryId]);
-    */
-
     useEffect( () => {
         setProducts([]);
         setLoading(true);
@@ -45,7 +21,7 @@ function ItemListContainer() {
         let myQuery = "";
 
         if (itemName) {
-            const name = itemName.toLocaleLowerCase();
+            let name = itemName.toLowerCase();
             myQuery = query(productsRef, orderBy("name", "asc"), where("name", ">=", name), where("name", "<=", name + "\uf8ff"));
         } else if (categoryId) {
             myQuery = query(productsRef, orderBy("name", "asc"), where("category", "==", categoryId));

@@ -12,20 +12,6 @@ function ItemDetailContainer() {
     const [loading, setLoading] = useState(true);
     const { itemId } = useParams();
 
-    /*
-    useEffect( () => {
-        setProduct(null);
-        requestProductById(Number(itemId))
-            .then( (res) => {
-                setProduct(res);
-                setError(null);
-            })
-            .catch( (err) => {
-                setError(err.error);
-            });
-    }, [itemId]);
-    */
-
     useEffect( () => {
         setProduct(null);
         setLoading(true);
@@ -53,7 +39,7 @@ function ItemDetailContainer() {
                 loading
                     ? <Spinner />
                     : product
-                        ? <ItemDetail {...product} />
+                        ? <ItemDetail {...product}/>
                         : <NotFound />
             }
         </div>

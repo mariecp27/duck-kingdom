@@ -6,10 +6,10 @@ function PaymentMethods() {
         <div className="payment-methods">
             <h3>Medios de pago aceptados</h3>
             <div className="payment-methods-icons">
-                <FontAwesomeIcon icon = { faCcMastercard } />
-                <FontAwesomeIcon icon = { faCcPaypal } />
-                <FontAwesomeIcon icon = { faCcVisa } />
-                <FontAwesomeIcon icon = { faCcAmazonPay } />
+                <FontAwesomeIcon icon={faCcMastercard}/>
+                <FontAwesomeIcon icon={faCcPaypal}/>
+                <FontAwesomeIcon icon={faCcVisa}/>
+                <FontAwesomeIcon icon={faCcAmazonPay}/>
             </div>
         </div>
     )

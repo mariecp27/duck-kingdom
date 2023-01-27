@@ -17,13 +17,13 @@ function ItemList( { products } ) {
             className="item-list"
             data-aos="fade-up"
         >
-            <img src={process.env.PUBLIC_URL + "/assets/images/title.png"} alt="Título" className="item-list_title" />
+            <img src={process.env.PUBLIC_URL + "/assets/images/title.png"} alt="Título" className="item-list_title"/>
             <hr />
             <div className="container-fluid">
                 <section className="row row-cols-lg-5 justify-content-center m-0">
                     {
                         products.map( product => (
-                            <Item {...product} key={product.id} />
+                            <Item {...product} key={product.id}/>
                         ))
                     }
                 </section>

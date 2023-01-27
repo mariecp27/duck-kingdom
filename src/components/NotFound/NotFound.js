@@ -27,7 +27,12 @@ function NotFound() {
         >
             <img src={process.env.PUBLIC_URL + "/assets/images/404.png"} alt="404"/>
             <h3>¡Oh!, no hay nada aquí</h3>
-            <button className="item-detail__text-container-back" onClick={handleGoHome}><FontAwesomeIcon icon = { faCircleArrowLeft } />Ir al inicio</button>
+            <button
+                className="item-detail__text-container-back"
+                onClick={handleGoHome}
+            >
+                <FontAwesomeIcon icon={faCircleArrowLeft}/>Ir al inicio
+            </button>
         </div>
     )
 }

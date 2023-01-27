@@ -13,7 +13,7 @@ function Modal() {
     return (
         <div className={`modal__overlay ${modalStatus ? "modal__active" : ""}`}>
             <div className="modal__container">
-                <FontAwesomeIcon icon = { faXmarkCircle } onClick={handleModal} />
+                <FontAwesomeIcon icon={faXmarkCircle} onClick={handleModal}/>
                 {
                     favorites.length > 0
                         ?   <FavoriteContainer />

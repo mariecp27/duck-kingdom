@@ -59,6 +59,7 @@
             font-family: $myTitle;
             font-size: 1.3rem;
             border: $myDarkBlue 1px solid;
+            margin: 0 5px;
 
             &:focus {
                 border: $myPink 1px solid;
@@ -71,6 +72,7 @@
             font-family: $myTitle;
             font-size: 1.3rem;
             border: #ffffff 1px solid;
+            margin: 0 5px;
 
             &:hover {
                 background-color: $myPink;
