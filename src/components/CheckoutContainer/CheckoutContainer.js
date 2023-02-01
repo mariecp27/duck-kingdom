@@ -2,10 +2,10 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useCartContext } from "../../context/CartContext";
-import Cart from "../Cart/Cart";
+import Checkout from "../Checkout/Checkout";
 import NoCart from "../NoCart/NoCart";
 
-function CartContainer() {
+function CheckoutContainer() {
     const { cart } = useCartContext();
 
     useEffect(() => {
@@ -18,15 +18,14 @@ function CartContainer() {
     return (
         <div        
             data-aos="fade-up"
-            className="cart"
         >
             {
                 cart.length > 0
-                ?   <Cart />
+                ?   <Checkout />
                 :   <NoCart />
             }
         </div>
     );
 }
 
-export default CartContainer;
+export default CheckoutContainer;

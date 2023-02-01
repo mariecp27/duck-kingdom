@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCcMastercard, faCcPaypal, faCcVisa, faCcAmazonPay } from "@fortawesome/free-brands-svg-icons";
+import { faCcMastercard, faCcVisa, faCcAmazonPay } from "@fortawesome/free-brands-svg-icons";
 
 function PaymentMethods() {
     return (
@@ -7,7 +7,6 @@ function PaymentMethods() {
             <h3>Medios de pago aceptados</h3>
             <div className="payment-methods-icons">
                 <FontAwesomeIcon icon={faCcMastercard}/>
-                <FontAwesomeIcon icon={faCcPaypal}/>
                 <FontAwesomeIcon icon={faCcVisa}/>
                 <FontAwesomeIcon icon={faCcAmazonPay}/>
             </div>

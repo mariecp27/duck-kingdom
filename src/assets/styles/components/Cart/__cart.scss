@@ -25,7 +25,7 @@
         }
     }
 
-    .cart_button {
+    .cart_finish {
         border: 1px solid $myOrange;
         border-radius: 20px;
         background: $myOrange;
@@ -33,9 +33,25 @@
         font-size: 1.5rem;
         color: $myDarkBlue;
         font-weight: bold;
+        text-decoration: none;
+        display: block;
+        width: fit-content;
+        margin: 10px auto;
 
         &:hover {
             background: $myYellow;
+        }
+    }
+
+    .cart_empty {
+        background: none;
+        border: none;
+        color: $myOrange;
+        font-weight: bold;
+        font-size: 1.5rem;
+
+        &:hover {
+            color: $myYellow;
         }
     }
 }
