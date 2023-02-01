@@ -1,0 +1,121 @@
+.checkout-form {
+    width: 85%;
+    margin: 20px auto;
+    font-family: $myText;
+    border: 1px $myOrange solid;
+    border-radius: 20px;
+    padding: 10px;
+    color: $myDarkBlue;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid #ffb8037f;
+    
+    h2 {
+        font-size: 2rem;
+        background: #ffb8037f;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        padding: 10px 0;
+        margin: 0;
+        font-weight: bold;
+    }
+
+    form {
+        font-size: 1.5rem;
+
+        & > div {
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+            margin: 10px auto;
+            text-align: left;
+
+            input,
+            select {
+                font-size: 1.3rem;
+                border: $myDarkBlue 1px solid;
+                border-radius: 0.375rem;
+                padding: 5px;
+                color: $myDarkBlue;
+    
+                &:focus {
+                    border: $myPink 1px solid;
+                    box-shadow: none;
+                    outline: none;
+                }
+            }
+        }
+        
+        .checkout-form_card {
+            margin: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+
+            .checkout-form_due-date {
+                width: fit-content;
+                
+                div {
+                margin: 0;
+                display: flex;
+                flex-direction: row;
+
+                    input {
+                        margin-right:5px;
+                    }
+                }
+            }
+
+            .checkout-form_cvc {
+                width: fit-content;
+                display: flex;
+                flex-direction: column;
+
+                input {
+                    margin-right:5px;
+                }
+            }
+        }
+
+        button {
+            border: 1px solid $myOrange;
+            border-radius: 20px;
+            background: $myOrange;
+            padding: 5px 20px;
+            font-size: 1.5rem;
+            margin: 10px;
+            color: $myDarkBlue;
+            font-weight: bold;
+    
+            &:hover {
+                background: $myYellow;
+            }
+        }
+    }
+}
+
+/*===== ESTILOS TABLET - MD =====*/
+@media only screen and (min-width: 768px) {
+    .checkout-form {
+        width: 50%;
+        margin: 20px;
+    }
+}
+
+/*===== ESTILOS LG =====*/
+@media only screen and (min-width: 992px) {
+    .checkout-form {
+        width: 40%;
+    }
+}
+
+/*===== ESTILOS XL =====*/
+@media only screen and (min-width: 1200px) {
+    .checkout-form {
+        width: 30%;
+    }
+}

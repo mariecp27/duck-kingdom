@@ -10,8 +10,11 @@
 @import './components/Item/item';
 @import './components/ItemDetail/itemDetail';
 @import './components/ItemCount/itemCount';
-@import './components/Cart/_cart';
-@import './components/CartItem/_cartItem';
+@import './components/Cart/cart';
+@import './components/CartItem/cartItem';
+@import './components/Checkout/checkout';
+@import './components/PurchaseSummary/purchaseSummary';
+@import './components/CheckoutForm/checkoutForm';
 @import './components/NoCart/noCart';
 @import './components/Spinner/spinner';
 @import './components/Footer/footer';

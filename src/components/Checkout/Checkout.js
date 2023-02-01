@@ -37,16 +37,18 @@ function Checkout() {
 
     return (
         <div>
-            <img src={process.env.PUBLIC_URL + "/assets/images/purchase.png"} className="cart_title" alt="Título"/>
+            <img src={process.env.PUBLIC_URL + "/assets/images/purchase.png"} className="checkout_title" alt="Título"/>
             <hr />
-            <PurchaseSummary
-                getTotal={getTotal}
-            />
-            <CheckoutForm
-                values={values}
-                setValues={setValues}
-                handleSubmit={handleSubmit}
-            />
+            <div className="checkout-content">
+                <PurchaseSummary
+                    getTotal={getTotal}
+                />
+                <CheckoutForm
+                    values={values}
+                    setValues={setValues}
+                    handleSubmit={handleSubmit}
+                />
+            </div>
         </div>
     )
 }

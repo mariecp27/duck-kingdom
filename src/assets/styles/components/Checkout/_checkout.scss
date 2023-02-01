@@ -1,0 +1,49 @@
+.checkout {
+    width: 100%;
+    min-height: 70vh;
+    text-align: center;
+
+    .checkout_title {
+        width: 70%;
+        opacity: 0.9;
+        margin: 20px 0;
+    }
+    
+    hr {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+/*===== ESTILOS TABLET - MD =====*/
+@media only screen and (min-width: 768px) {
+    .checkout {
+        .checkout-content {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .checkout_title {
+            width: 50%;
+        }
+    }
+}
+
+/*===== ESTILOS LG =====*/
+@media only screen and (min-width: 992px) {
+    .checkout {
+        .checkout_title {
+            width: 40%;
+        }
+    }
+}
+
+/*===== ESTILOS XL =====*/
+@media only screen and (min-width: 1200px) {
+    .checkout {
+        .checkout_title {
+            width: 25%;
+        }
+    }
+}

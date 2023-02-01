@@ -18,6 +18,7 @@ function CheckoutContainer() {
     return (
         <div        
             data-aos="fade-up"
+            className="checkout"
         >
             {
                 cart.length > 0
