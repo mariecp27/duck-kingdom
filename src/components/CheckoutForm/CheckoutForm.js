@@ -1,13 +1,6 @@
 import React from 'react'
 
-function CheckoutForm( { values, setValues, handleSubmit } ) {
-
-    const handleInputChange = (e) => {
-        setValues({
-            ...values,
-            [e.target.name]: e.target.value
-        });
-    }
+function CheckoutForm( { values, errors, handleInputChange, handleSubmit } ) {
 
     return (
         <section className="checkout-form">
@@ -16,50 +9,46 @@ function CheckoutForm( { values, setValues, handleSubmit } ) {
                 <div>
                     <label htmlFor="name">Nombre</label>
                     <input
-                        className=""
                         id="name"
                         name="name"
                         onChange={handleInputChange}
                         type="text"
                         value={values.name}
-                        required
                     />
+                    {errors.name && <small>{errors.name}</small>}
                 </div>
                 <div>
                     <label htmlFor="address">Dirección</label>
                     <input
-                        className=""
                         id="address"
                         name="address"
                         onChange={handleInputChange}
                         type="text"
                         value={values.address}
-                        required
                     />
+                    {errors.address && <small>{errors.address}</small>}
                 </div>
                 <div>
                     <label htmlFor="phone">Celular</label>
                     <input
-                        className=""
                         id="phone"
                         name="phone"
                         onChange={handleInputChange}
-                        type="tel"
+                        type="number"
                         value={values.phone}
-                        required
                     />
+                    {errors.phone && <small>{errors.phone}</small>}
                 </div>
                 <div>
                     <label htmlFor="email">E-mail</label>
                     <input
-                        className=""
                         id="email"
                         name="email"
                         onChange={handleInputChange}
                         type="email"
                         value={values.email}
-                        required
                     />
+                    {errors.email && <small>{errors.email}</small>}
                 </div>
                 <div>
                     <label htmlFor="paymentMethod">Medio de pago</label>
@@ -68,32 +57,30 @@ function CheckoutForm( { values, setValues, handleSubmit } ) {
                         id="paymentMethod"
                         onChange={handleInputChange}
                         value={values.paymentMethod}
-                        required
                     >
                         <option value={""} disabled>Selecciona un método de pago</option>
                         <option value={"mastercard"}>Mastercard</option>
                         <option value={"visa"}>Visa</option>
                         <option value={"amazonPay"}>Amazon Pay</option>
                     </select>
+                    {errors.paymentMethod && <small>{errors.paymentMethod}</small>}
                 </div>
                 <div>
                     <label htmlFor="card">Número de tarjeta</label>
                     <input
-                        className=""
                         id="card"
                         name="card"
                         onChange={handleInputChange}
                         type="number"
                         value={values.card}
-                        required
                     />
+                    {errors.card && <small>{errors.card}</small>}
                 </div>
                 <div className="checkout-form_card">
                     <div className="checkout-form_due-date">                            
                         <label>Vencimiento</label>
                         <div>
                             <input
-                                className=""
                                 name="dueDateMonth"
                                 onChange={handleInputChange}
                                 type="number"
@@ -101,10 +88,8 @@ function CheckoutForm( { values, setValues, handleSubmit } ) {
                                 placeholder="MM"
                                 min={1}
                                 max={12}
-                                required
                             /> 
                             <input
-                                className=""
                                 name="dueDateYear"
                                 onChange={handleInputChange}
                                 type="number"
@@ -112,14 +97,12 @@ function CheckoutForm( { values, setValues, handleSubmit } ) {
                                 placeholder="YY"
                                 min={1}
                                 max={99}
-                                required
                             />
                         </div>
                     </div>
                     <div className="checkout-form_cvc">
                         <label htmlFor="cvc">CVC</label>
                         <input
-                            className=""
                             id="cvc"
                             name="cvc"
                             onChange={handleInputChange}
@@ -127,9 +110,9 @@ function CheckoutForm( { values, setValues, handleSubmit } ) {
                             value={values.cvc}
                             min={0}
                             max={999}
-                            required
                         />
                     </div>
+                    {errors.cardOthers && <small>{errors.cardOthers}</small>}
                 </div>
                 <button>Finalizar compra</button>
             </form>

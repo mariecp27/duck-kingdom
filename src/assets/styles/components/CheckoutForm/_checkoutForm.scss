@@ -47,6 +47,11 @@
                     outline: none;
                 }
             }
+
+            small {
+                color: $myPink;
+                font-weight: bold;
+            }
         }
         
         .checkout-form_card {

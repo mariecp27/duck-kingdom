@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useCartContext } from "../../context/CartContext";
+import { validateForm } from "../../helpers/validateForm";
 import CheckoutForm from "../CheckoutForm/CheckoutForm";
 import PurchaseSummary from "../PurchaseSummary/PurchaseSummary";
 
@@ -18,14 +19,28 @@ function Checkout() {
         dueDateYear: '',
         cvc: ''
     });
+    const [errors, setErrors] = useState({});
 
     const getTotal = () => {
         return totalCart() * (1 + 0.19) + 10000;
     }
 
+    const handleInputChange = (e) => {
+        setValues({
+            ...values,
+            [e.target.name]: e.target.value
+        });
+    }
+
     const handleSubmit = (e) => {
         e.preventDefault();
 
+        setErrors(validateForm(values));
+
+        if (Object.keys(errors).length > 0) {
+            return;
+        }
+        
         const order = {
             client: values,
             items: cart,
@@ -45,7 +60,8 @@ function Checkout() {
                 />
                 <CheckoutForm
                     values={values}
-                    setValues={setValues}
+                    errors={errors}
+                    handleInputChange={handleInputChange}
                     handleSubmit={handleSubmit}
                 />
             </div>

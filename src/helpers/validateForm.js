@@ -1,0 +1,40 @@
+export const validateForm = (value) => {
+    let errors = {};
+    let regexName = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/;
+    let regexEmail = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+
+    if (value.name.includes("  ") || !value.name.trim() || !regexName.test(value.name.trim())) {
+        errors.name = "Ingresa un nombre válido";
+    } else if (value.name.length < 5) {
+        errors.name = "Tu nombre ha de tener, al menos, 5 caracteres";
+    }
+
+    if (value.address.includes("  ") || !value.address.trim()) {
+        errors.address = "Ingresa una dirección válida";
+    }
+
+    if (value.phone.length < 7) {
+        errors.phone = "Ingresa un número de teléfono válido";
+    }
+
+    if (!regexEmail.test(value.email.trim())) {
+        errors.email = "Ingresa un e-mail válido";
+    }
+
+    if (value.paymentMethod === "") {
+        errors.paymentMethod = "Selecciona un método de pago";
+    }
+
+    if (value.card.length < 17) {
+        errors.card = "Ingresa un número de tarjeta válido";
+    }
+
+    if (value.dueDateMonth === "" || value.dueDateYear === "" || value.cvc === "") {
+        errors.cardOthers = "Ingresa la información de tu tarjeta";
+
+    } else if (value.dueDateMonth.length > 2 || value.dueDateYear.length > 2 || value.cvc.length > 3) {
+        errors.cardOthers = "Verifica la información de tu tarjeta";
+    }
+
+    return errors;
+}
