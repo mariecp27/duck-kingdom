@@ -86,6 +86,12 @@
             }
         }
 
+        .checkout-form__others {
+            color: $myPink;
+            font-weight: bold;
+            display: block;
+        }
+
         button {
             border: 1px solid $myOrange;
             border-radius: 20px;

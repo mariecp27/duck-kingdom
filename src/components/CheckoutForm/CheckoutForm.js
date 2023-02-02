@@ -112,8 +112,8 @@ function CheckoutForm( { values, errors, handleInputChange, handleSubmit } ) {
                             max={999}
                         />
                     </div>
-                    {errors.cardOthers && <small>{errors.cardOthers}</small>}
                 </div>
+                {errors.cardOthers && <small className="checkout-form__others">{errors.cardOthers}</small>}
                 <button>Finalizar compra</button>
             </form>
         </section>

@@ -127,3 +127,13 @@
         }
     }
 }
+
+/*===== ESTILOS XL =====*/
+@media only screen and (min-width: 1200px) {
+    .main__navbar {
+        /* Form */
+        .navbar__form {
+            width: 20%;
+        }
+    }
+}

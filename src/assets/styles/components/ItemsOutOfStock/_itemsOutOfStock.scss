@@ -1,29 +1,19 @@
-.purchase-summary {
+.items-out-of-stock {
     width: 85%;
+    display: block;
+    background-color: #ffb8037f;
     margin: 20px auto;
     font-family: $myText;
     border: 1px $myOrange solid;
     border-radius: 20px;
     padding: 10px;
     color: $myDarkBlue;
-    /* From https://css.glass */
-    background: rgba(255, 255, 255, 0.1);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(5px);
     border: 1px solid #ffb8037f;
-    
-    h2 {
-        font-size: 2rem;
-        background: #ffb8037f;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
-        padding: 10px 0;
-        margin: 0;
-        font-weight: bold;
-    }
+    font-size: 1.5rem;
+    color: $myDarkBlue;
 
-    .purchase-summary_products {
+    .items-out-of-stock__products {
         display: grid;
         grid-template-rows: auto;
         row-gap: 10px;
@@ -38,10 +28,11 @@
 
         article {
             display: grid;
-            width: 100%;
-            grid-template-columns: repeat(3, 1fr);
+            width: 90%;
+            grid-template-columns: repeat(2, 1fr);
             align-items: center;
             justify-items: center;
+            margin: 0 auto;
             
             h3,
             p,
@@ -55,36 +46,41 @@
         }
     }
 
-    .purchase-summary_hr {
+    .items-out-of-stock__hr {
         width: 90%;
         opacity: 1;
         margin: 10px auto;
-        border-top: 1px solid $myYellow;
+        border-top: 1px solid $myDarkBlue;
     }
 
-    .purchase-summary_prices {
-        width: 90%;
-        margin: 0 auto;
-        text-align: right;
+    a {
+        border: 1px solid $myOrange;
+        border-radius: 20px;
+        background: $myOrange;
+        padding: 5px 20px;
         font-size: 1.5rem;
+        margin: 5px;
+        color: $myDarkBlue;
+        font-weight: bold;
+        text-decoration:  none;
+        display: inline-block;
 
-        span {
-            color: $myOrange;
+        &:hover {
+            background: $myYellow;
         }
     }
 }
 
 /*===== ESTILOS TABLET - MD =====*/
 @media only screen and (min-width: 768px) {
-    .purchase-summary {
-        width: 40%;
-        margin: 20px;
+    .items-out-of-stock {
+        width: 60%;
     }
 }
 
-/*===== ESTILOS LG =====*/
-@media only screen and (min-width: 992px) {
-    .purchase-summary {
+/*===== ESTILOS XL =====*/
+@media only screen and (min-width: 1200px) {
+    .items-out-of-stock {
         width: 30%;
     }
 }

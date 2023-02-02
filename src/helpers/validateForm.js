@@ -1,7 +1,12 @@
 export const validateForm = (value) => {
     let errors = {};
+
     let regexName = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/;
     let regexEmail = /^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$/;
+
+    let date = new Date();
+    let month = (date.getMonth() + 1).toString().slice(-2);
+    let year = date.getFullYear().toString().slice(-2);
 
     if (value.name.includes("  ") || !value.name.trim() || !regexName.test(value.name.trim())) {
         errors.name = "Ingresa un nombre válido";
@@ -31,9 +36,10 @@ export const validateForm = (value) => {
 
     if (value.dueDateMonth === "" || value.dueDateYear === "" || value.cvc === "") {
         errors.cardOthers = "Ingresa la información de tu tarjeta";
-
     } else if (value.dueDateMonth.length > 2 || value.dueDateYear.length > 2 || value.cvc.length > 3) {
         errors.cardOthers = "Verifica la información de tu tarjeta";
+    } else if ((Number(value.dueDateYear) < Number(year)) || (Number(value.dueDateYear) === Number(year) && Number(value.dueDateMonth) < Number(month))) {
+        errors.cardOthers = "Oh, parece que la tarjeta ha caducado. Intenta nuevamente";
     }
 
     return errors;

@@ -68,6 +68,12 @@
             font-size: 2rem;
         }
 
+        .item-detail__no-stock-img {
+            display: block;
+            margin: 20px auto;
+            opacity: 0.9;
+        }
+
         .item-detail__text-container-back {
             background: none;
             border: none;
@@ -101,6 +107,10 @@
 
         .item-detail__text-container {
             margin: 20px;
+
+            .item-detail__no-stock-img {
+                width: 50%;
+            }
         }
     }
 }
@@ -114,6 +124,10 @@
 
         .item-detail__text-container {
             width: 50%;
+
+            .item-detail__no-stock-img {
+                width: 40%;
+            }
         }
     }
 }
@@ -127,6 +141,10 @@
 
         .item-detail__text-container {
             width: 40%;
+
+            .item-detail__no-stock-img {
+                width: 30%;
+            }
         }
     }
 }

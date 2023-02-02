@@ -31,7 +31,6 @@ function ItemDetail( { id, image, name, source, description, price, height, mate
             price,
             height,
             material,
-            stock,
             amount
         }
 
@@ -84,14 +83,20 @@ function ItemDetail( { id, image, name, source, description, price, height, mate
                     <p><strong>Patitos disponibles: </strong>{stock}</p>
                     <strong className="item-detail__text-container-price">{formatterPeso(price)}</strong>
                     {
-                        <ItemCount
-                            id={id}
-                            stock={stock}
-                            amount={amount}
-                            setAmount={setAmount}
-                            handleAddToCart={handleAddToCart}
-                            productInCart={productInCart}
-                        />
+                        stock === 0
+                            ?   <img
+                                    src={process.env.PUBLIC_URL + "/assets/images/noStock.png"}
+                                    alt="Item without stock"
+                                    className="item-detail__no-stock-img"
+                                />
+                            :   <ItemCount
+                                    id={id}
+                                    stock={stock}
+                                    amount={amount}
+                                    setAmount={setAmount}
+                                    handleAddToCart={handleAddToCart}
+                                    productInCart={productInCart}
+                                />
                     }
                     <button className="item-detail__text-container-back" onClick={handleGoBack}>
                         <FontAwesomeIcon icon={faCircleArrowLeft}/>Volver

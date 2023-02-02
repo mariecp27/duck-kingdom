@@ -9,6 +9,11 @@ function PurchaseSummary( { getTotal } ) {
         <section className="purchase-summary">
             <h2>Resumen de compra</h2>
             <div className="purchase-summary_products">
+                <article>
+                    <p className="m-0">Patito</p>
+                    <p className="m-0">Cantidad</p>
+                    <p className="m-0">Precio</p>
+                </article>
                 {
                     cart.map(product => (
                         <article key={product.id}>

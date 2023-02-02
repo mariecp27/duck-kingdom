@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { collection, addDoc } from "firebase/firestore";
+import { collection, writeBatch, documentId, getDocs, query, addDoc, where } from "firebase/firestore";
 import { db } from "../../firebase/config.js";
 import { getDate } from "../../helpers/getDate.js";
 import { useCartContext } from "../../context/CartContext";
 import { validateForm } from "../../helpers/validateForm";
-import CheckoutForm from "../CheckoutForm/CheckoutForm";
+import ItemsOutOfStock from "../ItemsOutOfStock/ItemsOutOfStock.js";
 import PurchaseSummary from "../PurchaseSummary/PurchaseSummary";
+import CheckoutForm from "../CheckoutForm/CheckoutForm";
 import Spinner from "../Spinner/Spinner";
 
 function Checkout() {
@@ -39,6 +40,7 @@ function Checkout() {
 
     const [orderId, setOrderId] = useState(null);
     const [loading, setLoading] = useState(false);
+    const [itemsOutOfStock, setItemsOutOfStock] = useState([]);
 
     const getTotal = () => {
         return totalCart() * (1 + 0.19) + 10000;
@@ -51,43 +53,75 @@ function Checkout() {
         });
     }
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setErrors(validateForm(values));
+    };
+
     useEffect( () => {
-        if (Object.keys(errors).length > 0) {
-            return;
+
+        const sendOrder = async() => {
+
+            if (Object.keys(errors).length > 0) {
+                return;
+            }
+
+            setLoading(true);
+    
+            const order = {
+                client: values,
+                items: cart,
+                total: getTotal(),
+                date: getDate()
+            };
+    
+            const batch = writeBatch(db);
+            const productsRef = collection(db, "duck-kingdom-products");
+            const ordersRef = collection(db, "duck-kingdom-orders");
+
+            const outOfStock = [];
+    
+            const productsQuery = query(productsRef, where(documentId(), "in", cart.map(product => product.id)));
+
+            const productsInCart = await getDocs(productsQuery);
+
+            productsInCart.docs.forEach( (doc) => {
+                const product = cart.find(item => item.id === doc.id);
+
+                if (doc.data().stock >= product.amount) {
+                    batch.update(doc.ref, {stock:doc.data().stock - product.amount});
+                } else {
+                    outOfStock.push(product);
+                }
+            });
+
+            if (outOfStock.length === 0) {
+                batch.commit()
+                    .then(() => {
+                        addDoc(ordersRef, order)
+                            .then( (doc) => {
+                                setOrderId(doc.id);
+                            })
+                            .catch( (err) => {
+                                console.log(err);
+                            });
+                    });
+            } else {
+                setItemsOutOfStock(outOfStock);
+                setLoading(false);
+            }
         }
 
-        setLoading(true);
-    
-        const order = {
-            client: values,
-            items: cart,
-            total: getTotal(),
-            date: getDate()
-        };
-
-        const ordersRef = collection(db, "duck-kingdom-orders");
-
-        addDoc(ordersRef, order)
-            .then( (doc) => {
-                setOrderId(doc.id);
-            })
-            .catch( (err) => {
-                console.log(err);
-            });
-            
+        sendOrder();
     }, [errors]);
 
     useEffect( () => {
         if (orderId) {
             navigate(`/order/${orderId}`);
             emptyCart();
+            setLoading(false);
         }
     }, [orderId])
-    
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        setErrors(validateForm(values));
-    };
 
     return (
         <div>
@@ -97,6 +131,12 @@ function Checkout() {
                     :   <div>
                             <img src={process.env.PUBLIC_URL + "/assets/images/purchase.png"} className="checkout_title" alt="Título"/>
                             <hr />
+                                {
+                                    itemsOutOfStock.length > 0 &&
+                                        <ItemsOutOfStock
+                                            itemsOutOfStock={itemsOutOfStock}
+                                        />
+                                }
                             <div className="checkout-content">
                                 <PurchaseSummary
                                     getTotal={getTotal}

@@ -25,7 +25,6 @@ function App() {
 
             <Routes>
               <Route exact path="/" element={<Home />} />
-              <Route path="/duck-kingdom" element={<Home />} />
               <Route path="/products" element={<ItemListContainer />} />
               <Route path="/search" element={<ItemListContainer />} />
               <Route path="/search/:itemName" element={<ItemListContainer />} />

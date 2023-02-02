@@ -19,6 +19,7 @@ function MyNavBar() {
   const handleSubmit = (e) => {
     e.preventDefault();
     navigate(`/search/${searchInput}`);
+    setSearchInput("");
   }
 
   const handleSearchInput = (e) => {
