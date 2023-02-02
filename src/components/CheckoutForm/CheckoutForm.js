@@ -4,7 +4,7 @@ function CheckoutForm( { values, errors, handleInputChange, handleSubmit } ) {
 
     return (
         <section className="checkout-form">
-            <h2>Información del cliente</h2>
+            <h2>Detalles de facturación</h2>
             <form onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor="name">Nombre</label>

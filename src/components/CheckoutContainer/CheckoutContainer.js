@@ -6,6 +6,7 @@ import Checkout from "../Checkout/Checkout";
 import NoCart from "../NoCart/NoCart";
 
 function CheckoutContainer() {
+
     const { cart } = useCartContext();
 
     useEffect(() => {

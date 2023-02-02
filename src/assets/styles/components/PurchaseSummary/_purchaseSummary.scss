@@ -25,7 +25,7 @@
 
     .purchase-summary_products {
         display: grid;
-        grid-template-rows: repeat(3, 1fr);
+        grid-template-rows: auto;
         row-gap: 10px;
         margin: 10px 0;
 

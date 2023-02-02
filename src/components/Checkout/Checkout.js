@@ -1,4 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { collection, addDoc } from "firebase/firestore";
+import { db } from "../../firebase/config.js";
+import { getDate } from "../../helpers/getDate.js";
 import { useCartContext } from "../../context/CartContext";
 import { validateForm } from "../../helpers/validateForm";
 import CheckoutForm from "../CheckoutForm/CheckoutForm";
@@ -6,7 +10,9 @@ import PurchaseSummary from "../PurchaseSummary/PurchaseSummary";
 
 function Checkout() {
 
-    const { cart, totalCart } = useCartContext();
+    const { cart, emptyCart, totalCart } = useCartContext();
+
+    const navigate = useNavigate();
 
     const [values, setValues] = useState({
         name: '',
@@ -19,7 +25,18 @@ function Checkout() {
         dueDateYear: '',
         cvc: ''
     });
-    const [errors, setErrors] = useState({});
+
+    const [errors, setErrors] = useState({
+        name: '',
+        address: '',
+        phone: '',
+        email: '',
+        paymentMethod: '',
+        card: '',
+        cardOthers: ''
+    });
+
+    const [orderId, setOrderId] = useState(null);
 
     const getTotal = () => {
         return totalCart() * (1 + 0.19) + 10000;
@@ -32,23 +49,41 @@ function Checkout() {
         });
     }
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-
-        setErrors(validateForm(values));
-
+    useEffect( () => {
         if (Object.keys(errors).length > 0) {
             return;
         }
-        
+    
         const order = {
             client: values,
             items: cart,
-            total: getTotal()
-        }
+            total: getTotal(),
+            date: getDate()
+        };
 
-        console.log(order);
-    }
+        const ordersRef = collection(db, "duck-kingdom-orders");
+
+        addDoc(ordersRef, order)
+            .then( (doc) => {
+                setOrderId(doc.id);
+            })
+            .catch( (err) => {
+                console.log(err);
+            });
+            
+        }, [errors]);
+
+    useEffect( () => {
+        if (orderId) {
+            navigate(`/order/${orderId}`);
+            emptyCart();
+        }
+    }, [orderId])
+    
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setErrors(validateForm(values));
+    };
 
     return (
         <div>

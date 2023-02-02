@@ -7,6 +7,7 @@ import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import CartContainer from "./components/CartContainer/CartContainer";
 import CheckoutContainer from "./components/CheckoutContainer/CheckoutContainer";
+import OrderConfirmationContainer from "./components/OrderConfirmationContainer/OrderConfirmationContainer";
 import NotFound from "./components/NotFound/NotFound";
 import Footer from "./components/Footer/Footer";
 import { ModalProvider } from "./context/ModalContext";
@@ -32,6 +33,7 @@ function App() {
               <Route path="/item/:itemId" element={<ItemDetailContainer />} />
               <Route path="/cart" element={<CartContainer />} />
               <Route path="/checkout" element={<CheckoutContainer/>} />
+              <Route path="/order/:orderId" element={<OrderConfirmationContainer />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
 

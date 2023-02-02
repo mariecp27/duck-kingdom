@@ -19,7 +19,7 @@ function CartItem( { id, image, name, amount, price, stock } ) {
         amountInCart < stock && setAmountInCart(amountInCart + 1);
     }
     
-    useEffect(()=> {
+    useEffect(() => {
         updateAmountInCart(id, amountInCart);
     }, [id, amountInCart]);
     

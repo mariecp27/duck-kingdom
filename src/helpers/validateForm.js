@@ -1,7 +1,7 @@
 export const validateForm = (value) => {
     let errors = {};
     let regexName = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/;
-    let regexEmail = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+    let regexEmail = /^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$/;
 
     if (value.name.includes("  ") || !value.name.trim() || !regexName.test(value.name.trim())) {
         errors.name = "Ingresa un nombre válido";
@@ -25,8 +25,8 @@ export const validateForm = (value) => {
         errors.paymentMethod = "Selecciona un método de pago";
     }
 
-    if (value.card.length < 17) {
-        errors.card = "Ingresa un número de tarjeta válido";
+    if (value.card.length !== 16) {
+        errors.card = "El número de tarjeta ha de tener 16 dígitos";
     }
 
     if (value.dueDateMonth === "" || value.dueDateYear === "" || value.cvc === "") {
