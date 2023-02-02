@@ -1,0 +1,131 @@
+.order-confirmation {
+    width: 100%;
+    min-height: 70vh;
+    text-align: center;
+
+    .order-confirmation_title {
+        width: 70%;
+        opacity: 0.9;
+        margin: 20px 0;
+    }
+    
+    hr {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .order-confirmation__container {
+        width: 85%;
+        margin: 20px auto;
+        font-family: $myText;
+        border: 1px $myOrange solid;
+        border-radius: 20px;
+        padding: 10px;
+        color: $myDarkBlue;
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(2px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid #ffb8037f;
+        
+        h2 {
+            font-size: 2rem;
+            background: #ffb8037f;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            padding: 10px 0;
+            margin: 0;
+            font-weight: bold;
+        }
+
+        .order-confirmation__products {
+            display: grid;
+            grid-template-rows: auto;
+            row-gap: 10px;
+            margin: 10px 0;
+    
+            article {
+                display: grid;
+                width: 100%;
+                grid-template-columns: repeat(3, 1fr);
+                align-items: center;
+                justify-items: center;
+                
+                h3,
+                p {
+                    font-size: 1.5rem;
+                }
+    
+                h3 {
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .order-confirmation__hr {
+            width: 90%;
+            opacity: 1;
+            margin: 10px auto;
+            border-top: 1px solid $myYellow;
+        }
+
+        .order-confirmation_details {
+            width: 90%;
+            margin: 0 auto;
+            text-align: left;
+            font-size: 1.5rem;
+    
+            span {
+                color: $myOrange;
+            }
+        }
+    }
+
+    button {
+        background: none;
+        border: none;
+        color: $myOrange;
+        font-weight: bold;
+        font-size: 2rem;
+
+        &:hover {
+            color: $myYellow;
+        }
+    }
+}
+
+/*===== ESTILOS TABLET - MD =====*/
+@media only screen and (min-width: 768px) {
+    .order-confirmation {
+        .order-confirmation_title {
+            width: 50%;
+        }
+
+        .order-confirmation__container {
+            width: 40%;
+        }
+    }
+}
+
+/*===== ESTILOS LG =====*/
+@media only screen and (min-width: 992px) {
+    .order-confirmation {
+        .order-confirmation_title {
+            width: 40%;
+        }
+    }
+}
+
+/*===== ESTILOS XL =====*/
+@media only screen and (min-width: 1200px) {
+    .order-confirmation {
+        .order-confirmation_title {
+            width: 25%;
+        }
+
+        .order-confirmation__container {
+            width: 30%;
+        }
+    }
+}

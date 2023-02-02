@@ -14,11 +14,11 @@ export const validateForm = (value) => {
     }
 
     if (value.phone.length < 7) {
-        errors.phone = "Ingresa un número de teléfono válido";
+        errors.phone = "Tu número ha de tener, al menos, 7 dígitos";
     }
 
     if (!regexEmail.test(value.email.trim())) {
-        errors.email = "Ingresa un e-mail válido";
+        errors.email = "Ingresa un e-mail con un formato válido";
     }
 
     if (value.paymentMethod === "") {

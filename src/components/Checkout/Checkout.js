@@ -7,12 +7,13 @@ import { useCartContext } from "../../context/CartContext";
 import { validateForm } from "../../helpers/validateForm";
 import CheckoutForm from "../CheckoutForm/CheckoutForm";
 import PurchaseSummary from "../PurchaseSummary/PurchaseSummary";
+import Spinner from "../Spinner/Spinner";
 
 function Checkout() {
+    
+    const navigate = useNavigate();
 
     const { cart, emptyCart, totalCart } = useCartContext();
-
-    const navigate = useNavigate();
 
     const [values, setValues] = useState({
         name: '',
@@ -37,6 +38,7 @@ function Checkout() {
     });
 
     const [orderId, setOrderId] = useState(null);
+    const [loading, setLoading] = useState(false);
 
     const getTotal = () => {
         return totalCart() * (1 + 0.19) + 10000;
@@ -53,6 +55,8 @@ function Checkout() {
         if (Object.keys(errors).length > 0) {
             return;
         }
+
+        setLoading(true);
     
         const order = {
             client: values,
@@ -71,7 +75,7 @@ function Checkout() {
                 console.log(err);
             });
             
-        }, [errors]);
+    }, [errors]);
 
     useEffect( () => {
         if (orderId) {
@@ -87,19 +91,25 @@ function Checkout() {
 
     return (
         <div>
-            <img src={process.env.PUBLIC_URL + "/assets/images/purchase.png"} className="checkout_title" alt="Título"/>
-            <hr />
-            <div className="checkout-content">
-                <PurchaseSummary
-                    getTotal={getTotal}
-                />
-                <CheckoutForm
-                    values={values}
-                    errors={errors}
-                    handleInputChange={handleInputChange}
-                    handleSubmit={handleSubmit}
-                />
-            </div>
+            {
+                loading
+                    ?   <Spinner />
+                    :   <div>
+                            <img src={process.env.PUBLIC_URL + "/assets/images/purchase.png"} className="checkout_title" alt="Título"/>
+                            <hr />
+                            <div className="checkout-content">
+                                <PurchaseSummary
+                                    getTotal={getTotal}
+                                />
+                                <CheckoutForm
+                                    values={values}
+                                    errors={errors}
+                                    handleInputChange={handleInputChange}
+                                    handleSubmit={handleSubmit}
+                                />
+                            </div>
+                        </div>
+            }
         </div>
     )
 }
