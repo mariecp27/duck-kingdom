@@ -70,3 +70,12 @@
         }
     }
 }
+
+/*===== ESTILOS XL =====*/
+@media only screen and (min-width: 1200px) {
+    .favorite-item {
+        img {
+            width: 30%;
+        }
+    }
+}

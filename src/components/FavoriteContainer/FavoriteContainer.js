@@ -7,7 +7,7 @@ function FavoriteContainer() {
 
     return (
         <div>
-            <img src={process.env.PUBLIC_URL + "/assets/images/favorites.png"} alt="Título"/>
+            <img className="favorite-container__title" src={process.env.PUBLIC_URL + "/assets/images/favorites.png"} alt="Título"/>
                 <hr />
                 {                
                     favorites.map(product => (
