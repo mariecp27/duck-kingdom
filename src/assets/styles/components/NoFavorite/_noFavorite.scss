@@ -1,5 +1,9 @@
 .no-favorite {
     text-align: center;
+
+    img {
+        width: 70%;
+    }
     
     h2 {
         font-family: $myText;
@@ -14,7 +18,7 @@
         padding: 5px 20px;
         font-size: 1.5rem;
         display: block;
-        width: 60%;
+        width: fit-content;
         margin: 20px auto;
         color: $myDarkBlue;
         text-decoration: none;
